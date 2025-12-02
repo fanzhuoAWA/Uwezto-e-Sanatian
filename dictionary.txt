@@ -2137,7 +2137,7 @@ phonetic_symbols:暂无
 word:nwah
 explanation:外来的人（游客、外国人、外地人……）；不分性别的称呼（靓仔/靓女、伙计……）；（贬义，就是说某人穿的人模狗样）绅士@@@表示震惊、惊讶；表示愤怒；表示兴奋；表示赞赏；表示（被）惊吓；表示疑问；表示轻蔑；表示惊叹@@@他；她；它
 part_of_speech:n.@@@int.@@@pron.
-phonetic_symbols:暂无
+phonetic_symbols:/nwaɬ/
 example_sentence:1.nwah?!😨###卧槽？！😨
 
 word:kownmont
@@ -3059,3 +3059,11 @@ explanation:初始化；初始设定
 part_of_speech:n.
 phonetic_symbols:/ɪ.ˈnɪts/
 grammar_note:来自英语"initialization"的缩写，动词形式initzen（进行初始化）
+
+word:aldra
+explanation:修改；调整；更改
+part_of_speech:vt.
+phonetic_symbols:/ˈald.ra/
+grammar_note:过去时aldraz，名词化形式aldrað（表示“修改行为”或“修改处”）
+example_sentence:1.Io aldra ö sana of sanatian.###我修改词典中的一个词。
+example_sentence:2.Ao oulue aldra dat'projekt'initz?###你可以修改那个项目初始化吗？

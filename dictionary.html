@@ -59,10 +59,11 @@
                     <button class="category-btn" data-category="noun">名词 (n.)</button>
                     <button class="category-btn" data-category="verb">动词 (v.)</button>
                     <button class="category-btn" data-category="adj">形容词 (adj.)</button>
+                    <button class="category-btn" data-category="adv">副词 (adv.)</button>
                     <button class="category-btn" data-category="pron">代词 (pron.)</button>
                     <button class="category-btn" data-category="conj">连词 (conj.)</button>
                     <button class="category-btn" data-category="int">感叹词 (int.)</button>
-                    <!-- 新增的三个类别 -->
+                    <button class="category-btn" data-category="prep">介词 (prep.)</button>
                     <button class="category-btn" data-category="art">冠词 (art.)</button>
                     <button class="category-btn" data-category="det">限定词 (det.)</button>
                     <button class="category-btn" data-category="num">数词 (num.)</button>
@@ -461,6 +462,14 @@
                                 break;
                             case 'int':
                                 if (pos.startsWith('int.')) return true;
+                                break;
+                            case 'adv':
+                                // 匹配 adv. 开头的词性
+                                if (pos.startsWith('adv.')) return true;
+                                break;
+                            case 'prep':
+                                // 匹配 prep. 开头的词性
+                                if (pos.startsWith('prep.')) return true;
                                 break;
                             case 'art':
                                 if (pos.startsWith('art.')) return true;
