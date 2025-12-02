@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乌斯托什语词典</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- 为了更好的兼容性，可以同时添加下面这行 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Uweztoße Sanatian</h1>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="输入要搜索的单词（支持中文或乌斯托什语）..." autocomplete="off">
+                <button id="searchBtn">搜索</button>
+            </div>
+
+            <div class="search-options">
+                <div class="option-group">
+                    <label for="searchType">搜索模式：</label>
+                    <select id="searchType">
+                        <option value="all">全部内容</option>
+                        <option value="word">仅单词</option>
+                        <option value="meaning">仅释义</option>
+                        <option value="example">仅例句</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <input type="checkbox" id="caseSensitive">
+                    <label for="caseSensitive">区分大小写</label>
+                </div>
+            </div>
+
+            <div class="results-info">
+                找到 <span id="resultCount">0</span> 个结果
+                <div class="status" id="status">正在加载词典数据...</div>
+            </div>
+        </div>
+
+        <div class="dictionary-content">
+            <div class="sidebar">
+                <h3 style="margin-bottom: 15px; color: #2c3e50;">按字母筛选</h3>
+                <div class="alphabet-filter" id="alphabetFilter">
+                    <!-- 字母按钮将通过JavaScript生成 -->
+                </div>
+
+                <h3 style="margin-bottom: 15px; color: #2c3e50; margin-top: 25px;">按类别筛选</h3>
+                <div class="category-filter" id="categoryFilter">
+                    <button class="category-btn active" data-category="all">全部词汇</button>
+                    <button class="category-btn" data-category="noun">名词 (n.)</button>
+                    <button class="category-btn" data-category="verb">动词 (v.)</button>
+                    <button class="category-btn" data-category="adj">形容词 (adj.)</button>
+                    <button class="category-btn" data-category="pron">代词 (pron.)</button>
+                    <button class="category-btn" data-category="conj">连词 (conj.)</button>
+                    <button class="category-btn" data-category="int">感叹词 (int.)</button>
+                    <!-- 新增的三个类别 -->
+                    <button class="category-btn" data-category="art">冠词 (art.)</button>
+                    <button class="category-btn" data-category="det">限定词 (det.)</button>
+                    <button class="category-btn" data-category="num">数词 (num.)</button>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="word-list" id="wordList">
+                    <!-- 单词卡片将通过JavaScript生成 -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>词典数据来源：Fanzhuo | 版权所有 © 2025 Fanzhuo - 保留所有权利</p>
+        </footer>
+    </div>
+
+    <script>
+        let dictionaryData = [];
+
+        async function loadDictionary() {
+            const statusEl = document.getElementById('status');
+            statusEl.textContent = '正在加载词典文件...';
+
+            try {
+                const response = await fetch('dictionary.txt');
+                if (!response.ok) throw new Error(`无法加载文件: ${response.status}`);
+                const text = await response.text();
+                dictionaryData = parseDictionaryText(text);
+
+                statusEl.textContent = `已加载 ${dictionaryData.length} 个词汇`;
+                initializeUI();
+
+            } catch (error) {
+                console.error('加载失败:', error);
+                statusEl.textContent = `加载失败: ${error.message}`;
+                statusEl.style.color = '#e74c3c';
+                document.getElementById('wordList').innerHTML = `
+                    <div class="no-results">
+                        <h3>无法加载词典文件</h3>
+                        <p>错误: ${error.message}</p>
+                        <p>请确保 dictionary.txt 文件与当前HTML文件在同一目录下。</p>
+                    </div>
+                `;
+            }
+        }
+
+        function extractPhoneticSymbols(text) {
+            const match = text.match(/\/([^/\n]+)\//); // 修改正则，避免匹配到换行
+            return match ? match[0] : null;
+        }
+
+        function parseDictionaryText(text) {
+            const entries = [];
+            const lines = text.split('\n');
+
+            let currentEntry = null;
+
+            // 辅助函数：从文本中提取音标
+
+
+            for (const rawLine of lines) {
+                const line = rawLine.trim();
+                if (!line) continue; // 跳过空行
+
+                const separatorIndex = line.indexOf(':');
+                if (separatorIndex === -1) {
+                    // 续行处理：附加到上一个合适的位置
+                    if (currentEntry) {
+                        if (currentEntry.examples.length > 0) {
+                            const lastExample = currentEntry.examples[currentEntry.examples.length - 1];
+                            lastExample.original += ' ' + line;
+                        } else if (currentEntry._pendingExplanation) {
+                            currentEntry._pendingExplanation += ' ' + line;
+                        }
+                    }
+                    continue;
+                }
+
+                const key = line.substring(0, separatorIndex).trim();
+                const value = line.substring(separatorIndex + 1).trim();
+
+                switch (key) {
+                    case 'word':
+                        // 保存上一个词条并开始新的
+                        if (currentEntry) {
+                            finalizeCurrentEntry(currentEntry, entries);
+                        }
+                        currentEntry = {
+                            word: value,
+                            phonetic_symbols: '暂无', // 默认值
+                            senses: [], // 存储词性-释义对
+                            examples: [],
+                            grammar_notes: [],
+                            _pendingExplanation: '', // 临时存储释义文本
+                            _pendingPartOfSpeech: '' // 临时存储词性文本
+                        };
+                        break;
+
+                    case 'explanation':
+                        if (currentEntry) currentEntry._pendingExplanation = value;
+                        break;
+
+                    case 'part_of_speech':
+                        if (currentEntry) currentEntry._pendingPartOfSpeech = value;
+                        break;
+
+                    case 'phonetic_symbols':
+                        if (currentEntry) {
+                            // 直接赋值，后续会从 grammar_notes 中再次检查
+                            currentEntry.phonetic_symbols = (value === '暂无' || !value) ? '暂无' : value;
+                        }
+                        break;
+
+                    case 'example_sentence':
+                        if (currentEntry) {
+                            const contentWithoutNumber = value.replace(/^\d+\.\s*/, '');
+                            const [original, translation] = contentWithoutNumber.split('###').map(s => s.trim());
+                            if (original) {
+                                currentEntry.examples.push({
+                                    original: original,
+                                    translation: translation || ''
+                                });
+                            }
+                        }
+                        break;
+
+                    case 'grammar_note':
+                        if (currentEntry) currentEntry.grammar_notes.push(value);
+                        break;
+                }
+            }
+
+            // 处理最后一个词条
+            if (currentEntry) {
+                finalizeCurrentEntry(currentEntry, entries);
+            }
+
+            console.log(`解析完成，共加载 ${entries.length} 个词条。`);
+            return entries;
+        }
+
+        // 辅助函数：完成当前词条的构建
+        function finalizeCurrentEntry(entry, entriesList) {
+            // 1. 处理词性和释义，构建 senses 数组
+            if (entry._pendingPartOfSpeech && entry._pendingExplanation) {
+                const posArray = entry._pendingPartOfSpeech.split('@@@').map(p => p.trim());
+                const expArray = entry._pendingExplanation.split('@@@').map(e => e.trim());
+
+                if (posArray.length === expArray.length) {
+                    // 情况A：词性和释义一一对应
+                    for (let i = 0; i < posArray.length; i++) {
+                        entry.senses.push({
+                            part_of_speech: posArray[i],
+                            explanation: expArray[i]
+                        });
+                    }
+                } else if (posArray.length > 1 && expArray.length === 1) {
+                    // 情况B：多个词性共享一个释义
+                    for (let i = 0; i < posArray.length; i++) {
+                        entry.senses.push({
+                            part_of_speech: posArray[i],
+                            explanation: expArray[0]
+                        });
+                    }
+                } else {
+                    // 情况C：其他情况，视为一个词性一个释义（可能是用“；”分割的多个释义）
+                    entry.senses.push({
+                        part_of_speech: entry._pendingPartOfSpeech,
+                        explanation: entry._pendingExplanation
+                    });
+                }
+            } else if (entry._pendingPartOfSpeech || entry._pendingExplanation) {
+                // 情况D：只有一个词性或只有一个释义
+                entry.senses.push({
+                    part_of_speech: entry._pendingPartOfSpeech || '',
+                    explanation: entry._pendingExplanation || ''
+                });
+            }
+
+            // 2. 音标智能提取与清理
+            // 先检查 grammar_notes 中是否有音标
+            for (let i = 0; i < entry.grammar_notes.length; i++) {
+                const extractedSymbols = extractPhoneticSymbols(entry.grammar_notes[i]);
+                if (extractedSymbols) {
+                    entry.phonetic_symbols = extractedSymbols;
+                    // 清理 grammar_note 中的音标
+                    const cleanedNote = entry.grammar_notes[i].replace(extractedSymbols, '').trim();
+                    if (cleanedNote) {
+                        entry.grammar_notes[i] = cleanedNote;
+                    } else {
+                        entry.grammar_notes.splice(i, 1);
+                        i--;
+                    }
+                    break; // 找到第一个音标即停止
+                }
+            }
+
+            // 确保音标格式正确
+            if (entry.phonetic_symbols !== '暂无' && entry.phonetic_symbols && !entry.phonetic_symbols.includes('/')) {
+                entry.phonetic_symbols = '/' + entry.phonetic_symbols + '/';
+            }
+
+            // 3. 清理临时字段并添加到列表
+            delete entry._pendingExplanation;
+            delete entry._pendingPartOfSpeech;
+
+            if (entry.word && entry.senses.length > 0) {
+                entriesList.push(entry);
+            }
+        }
+
+        function initializeUI() {
+            const alphabetFilter = document.getElementById('alphabetFilter');
+            alphabetFilter.innerHTML = '';
+
+            // 添加"全部"按钮
+            const allBtn = document.createElement('button');
+            allBtn.className = 'alphabet-btn active';
+            allBtn.textContent = '全部';
+            allBtn.dataset.letter = 'all';
+            allBtn.addEventListener('click', function () {
+                document.querySelectorAll('.alphabet-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                filterWords();
+            });
+            alphabetFilter.appendChild(allBtn);
+
+            // 为每个字母添加按钮
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(letter => {
+                const btn = document.createElement('button');
+                btn.className = 'alphabet-btn';
+                btn.textContent = letter;
+                btn.dataset.letter = letter;
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.alphabet-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterWords();
+                });
+                alphabetFilter.appendChild(btn);
+            });
+
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterWords();
+                });
+            });
+
+            document.getElementById('searchBtn').addEventListener('click', filterWords);
+            document.getElementById('searchInput').addEventListener('keyup', function (e) {
+                if (e.key === 'Enter') filterWords();
+            });
+
+            document.getElementById('searchType').addEventListener('change', filterWords);
+            document.getElementById('caseSensitive').addEventListener('change', filterWords);
+
+            displayWords(dictionaryData);
+        }
+
+        function displayWords(words) {
+            const wordList = document.getElementById('wordList');
+            const resultCount = document.getElementById('resultCount');
+
+            wordList.innerHTML = '';
+
+            if (!words || words.length === 0) {
+                wordList.innerHTML = '<div class="no-results">未找到匹配的词汇</div>';
+                resultCount.textContent = '0';
+                return;
+            }
+
+            resultCount.textContent = words.length;
+
+            words.forEach(item => {
+                const wordCard = document.createElement('div');
+                wordCard.className = 'word-card';
+
+                // 1. 单词标题和音标
+                const wordHeader = document.createElement('div');
+                wordHeader.className = 'word-header';
+                wordHeader.innerHTML = `
+            <div class="word-and-pos">
+                <span class="word">${item.word}</span>
+                ${item.phonetic_symbols && item.phonetic_symbols !== '暂无' ?
+                        `<span class="pronunciation">${item.phonetic_symbols}</span>` : ''}
+            </div>
+        `;
+
+                // 2. 多词性释义区域
+                const sensesSection = document.createElement('div');
+                sensesSection.className = 'senses-section';
+
+                if (item.senses && item.senses.length > 0) {
+                    let sensesHTML = '';
+                    item.senses.forEach(sense => {
+                        const posDisplay = sense.part_of_speech ? `<span class="sense-pos">${sense.part_of_speech}</span>` : '';
+                        sensesHTML += `
+                    <div class="sense-item">
+                        ${posDisplay}
+                        <span class="sense-explanation">${sense.explanation}</span>
+                    </div>
+                `;
+                    });
+                    sensesSection.innerHTML = `
+                <div class="section-title">释义</div>
+                <div class="senses-list">${sensesHTML}</div>
+            `;
+                }
+
+                // 3. 例句区域
+                let examplesSection = '';
+                if (item.examples && item.examples.length > 0) {
+                    let examplesHTML = '';
+                    item.examples.forEach(example => {
+                        examplesHTML += `
+                    <div class="example-item">
+                        <div class="example-original">${example.original}</div>
+                        ${example.translation ? `<div class="example-translation">${example.translation}</div>` : ''}
+                    </div>
+                `;
+                    });
+                    examplesSection = `
+                <div class="examples-section">
+                    <div class="section-title">例句</div>
+                    ${examplesHTML}
+                </div>
+            `;
+                }
+
+                // 4. 语法注释区域
+                let grammarSection = '';
+                if (item.grammar_notes && item.grammar_notes.length > 0) {
+                    const notesHTML = item.grammar_notes.map(note => `<div>${note}</div>`).join('');
+                    grammarSection = `
+                <div class="grammar-section">
+                    <div class="section-title">语法/注释</div>
+                    <div class="grammar-content">
+                        ${notesHTML}
+                    </div>
+                </div>
+            `;
+                }
+
+                // 组合所有部分
+                wordCard.appendChild(wordHeader);
+                wordCard.appendChild(sensesSection);
+                wordCard.innerHTML += examplesSection + grammarSection;
+                wordList.appendChild(wordCard);
+            });
+        }
+
+        function filterWords() {
+            if (dictionaryData.length === 0) return;
+
+            const searchInput = document.getElementById('searchInput').value.trim();
+            const searchType = document.getElementById('searchType').value;
+            const caseSensitive = document.getElementById('caseSensitive').checked;
+            const activeLetter = document.querySelector('.alphabet-btn.active')?.dataset.letter || 'all';
+            const activeCategory = document.querySelector('.category-btn.active')?.dataset.category || 'all';
+
+            let filteredWords = dictionaryData;
+
+            // 字母筛选
+            if (activeLetter !== 'all') {
+                filteredWords = filteredWords.filter(item =>
+                    item.word.charAt(0).toUpperCase() === activeLetter
+                );
+            }
+
+            // 类别筛选 - 适配新的 senses 结构
+            if (activeCategory !== 'all') {
+                filteredWords = filteredWords.filter(item => {
+                    // 检查每个词条的所有词性是否包含目标类别
+                    for (const sense of item.senses) {
+                        const posRaw = sense.part_of_speech.toLowerCase();
+                        const pos = posRaw.replace(/\.\d+$/, '.');
+
+                        switch (activeCategory) {
+                            case 'noun':
+                                if (pos.startsWith('n.')) return true;
+                                break;
+                            case 'verb':
+                                if (pos.startsWith('vt.') || pos.startsWith('vi.')) return true;
+                                break;
+                            case 'adj':
+                                if (pos.startsWith('adj.')) return true;
+                                break;
+                            case 'pron':
+                                if (pos.startsWith('pron.')) return true;
+                                break;
+                            case 'conj':
+                                if (pos.startsWith('conj.')) return true;
+                                break;
+                            case 'int':
+                                if (pos.startsWith('int.')) return true;
+                                break;
+                            case 'art':
+                                if (pos.startsWith('art.')) return true;
+                                break;
+                            case 'det':
+                                if (pos.includes('det.')) return true;
+                                break;
+                            case 'num':
+                                if (pos.includes('num.')) return true;
+                                break;
+                        }
+                    }
+                    return false; // 没有任何词性匹配目标类别
+                });
+            }
+
+            // 如果没有搜索词，直接显示结果
+            if (!searchInput) {
+                displayWords(filteredWords);
+                return;
+            }
+
+            const searchTerm = caseSensitive ? searchInput : searchInput.toLowerCase();
+
+            // 为每个匹配的词条计算权重分数
+            const weightedResults = filteredWords.map(item => {
+                let score = 0;
+                let matched = false;
+
+                // 根据搜索类型构建搜索文本
+                switch (searchType) {
+                    case 'word':
+                        // 仅搜索单词本身
+                        const wordLower = caseSensitive ? item.word : item.word.toLowerCase();
+                        if (wordLower.includes(searchTerm)) {
+                            matched = true;
+                            // 单词完全匹配
+                            if (wordLower === searchTerm) score += 10;
+                            // 单词开头匹配
+                            else if (wordLower.startsWith(searchTerm)) score += 7;
+                            else score += 1;
+                        }
+                        break;
+
+                    case 'meaning':
+                        // 搜索所有词性的中文释义
+                        for (const sense of item.senses) {
+                            const explanation = caseSensitive ? sense.explanation : sense.explanation.toLowerCase();
+                            if (explanation.includes(searchTerm)) {
+                                matched = true;
+                                score += 5; // 释义匹配
+                                break; // 找到一个匹配即可
+                            }
+                        }
+                        // 同时搜索例句翻译
+                        if (item.examples) {
+                            for (const example of item.examples) {
+                                if (example.translation) {
+                                    const translation = caseSensitive ? example.translation : example.translation.toLowerCase();
+                                    if (translation.includes(searchTerm)) {
+                                        matched = true;
+                                        score += 1; // 例句翻译匹配，分数较低
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        break;
+
+                    case 'example':
+                        // 仅搜索例句
+                        if (item.examples) {
+                            for (const example of item.examples) {
+                                const original = caseSensitive ? example.original : example.original.toLowerCase();
+                                const translation = example.translation ?
+                                    (caseSensitive ? example.translation : example.translation.toLowerCase()) : '';
+
+                                if (original.includes(searchTerm) || translation.includes(searchTerm)) {
+                                    matched = true;
+                                    score += 1; // 例句匹配
+                                    break;
+                                }
+                            }
+                        }
+                        break;
+
+                    case 'all':
+                    default:
+                        // 搜索全部内容
+                        let allSearchText = item.word + ' ';
+
+                        // 添加所有词性的释义
+                        for (const sense of item.senses) {
+                            allSearchText += sense.explanation + ' ';
+                            allSearchText += sense.part_of_speech + ' ';
+                        }
+
+                        // 添加音标
+                        if (item.phonetic_symbols && item.phonetic_symbols !== '暂无') {
+                            allSearchText += item.phonetic_symbols + ' ';
+                        }
+
+                        // 添加例句
+                        if (item.examples) {
+                            for (const example of item.examples) {
+                                allSearchText += example.original + ' ';
+                                if (example.translation) {
+                                    allSearchText += example.translation + ' ';
+                                }
+                            }
+                        }
+
+                        // 添加语法注释
+                        if (item.grammar_notes) {
+                            for (const note of item.grammar_notes) {
+                                allSearchText += note + ' ';
+                            }
+                        }
+
+                        const allSearchTextLower = caseSensitive ? allSearchText : allSearchText.toLowerCase();
+                        if (allSearchTextLower.includes(searchTerm)) {
+                            matched = true;
+
+                            // 计算权重
+                            const wordLower = caseSensitive ? item.word : item.word.toLowerCase();
+                            if (wordLower === searchTerm) score += 10;
+                            else if (wordLower.startsWith(searchTerm)) score += 7;
+                            else {
+                                // 检查是否在释义中
+                                let inExplanation = false;
+                                for (const sense of item.senses) {
+                                    const explanation = caseSensitive ? sense.explanation : sense.explanation.toLowerCase();
+                                    if (explanation.includes(searchTerm)) {
+                                        inExplanation = true;
+                                        break;
+                                    }
+                                }
+                                if (inExplanation) score += 5;
+                                else score += 1;
+                            }
+                        }
+                        break;
+                }
+
+                return {
+                    ...item,
+                    _score: score,
+                    _matched: matched
+                };
+            });
+
+            // 过滤并排序
+            const matchedAndSorted = weightedResults
+                .filter(item => item._matched)
+                .sort((a, b) => {
+                    if (b._score !== a._score) {
+                        return b._score - a._score;
+                    }
+                    return a.word.localeCompare(b.word);
+                });
+
+            displayWords(matchedAndSorted);
+        }
+
+        document.addEventListener('DOMContentLoaded', loadDictionary);
+    </script>
+</body>
+
+</html>
