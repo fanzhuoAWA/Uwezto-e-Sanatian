@@ -3040,3 +3040,22 @@ explanation:典；典籍；经典；册籍
 part_of_speech:n.
 phonetic_symbols:/tjæn/
 grammar_note:可作为词根，表示与典籍、经典、汇编相关的事物
+
+word:projekt'initz
+explanation:项目初始化
+part_of_speech:n.
+phonetic_symbols:/pro.ˈjekt ɪ.ˈnɪts/
+grammar_note:由projekt（项目）和initz（初始化）组合而成，表示项目的初始化过程或状态
+example_sentence:1.Io floë shinobit, nek io twov projekt'initz.###我感觉很好，现在正在做项目初始化。
+
+word:projekt
+explanation:项目；方案；工程
+part_of_speech:n.
+phonetic_symbols:/pro.ˈjekt/
+grammar_note:来自德语/英语外来词，复数形式projektp
+
+word:initz
+explanation:初始化；初始设定
+part_of_speech:n.
+phonetic_symbols:/ɪ.ˈnɪts/
+grammar_note:来自英语"initialization"的缩写，动词形式initzen（进行初始化）
