@@ -1,0 +1,1 @@
+Phow poëtz Uweztoße'sanatian lo'welenkul, xi oulue vezdser phow sanatian owej osøka Uweztoße'sanap.

@@ -3067,3 +3067,41 @@ phonetic_symbols:/ˈald.ra/
 grammar_note:过去时aldraz，名词化形式aldrað（表示“修改行为”或“修改处”）
 example_sentence:1.Io aldra ö sana of sanatian.###我修改词典中的一个词。
 example_sentence:2.Ao oulue aldra dat'projekt'initz?###你可以修改那个项目初始化吗？
+
+word:welenkul
+explanation:在线的；网络上的
+part_of_speech:adj.
+phonetic_symbols:/ˈwe.len.kʊl/
+grammar_note:复合词，由 wele（网）和 -n-（连接中缀）及 kul（水流、流）构成，字面意为“在网络之流中的”，修饰名词时用 lo' 连接。
+
+word:osøka
+explanation:查询；搜寻
+part_of_speech:vt.
+phonetic_symbols:/oˈsø.ka/
+grammar_note:由表示“向外、寻求”的前缀 o- 和词根 søka（寻找、探求）构成，是一个自洽的原生派生词。过去式 osøkaz。
+
+word:wele
+explanation:网；网络；网状系统
+part_of_speech:n.
+phonetic_symbols:/ˈwe.le/
+grammar_note:可作词根，用于构成与网络、连接相关的词汇。复数形式 welep。
+
+word:søka
+explanation:寻找；探求；搜索
+part_of_speech:vt.
+phonetic_symbols:/ˈsø.ka/
+grammar_note:过去式 søkaz，名词化形式 søkað（表示“寻找的行为”或“搜索结果”）。
+
+word:welesana
+explanation:网络词语；网络用语
+part_of_speech:n.
+phonetic_symbols:/ˈwe.le.sænə/
+grammar_note:由 wele（网） 和 sana（词语） 组合而成，复数形式 welesanap。
+example_sentence:1.Phow poëtz ö welesana。###这是一个网络词语。
+
+word:søka'cai
+explanation:搜索者；探求者
+part_of_speech:n.
+phonetic_symbols:/ˈsø.ka.ˌt͡saɪ̯/
+grammar_note:由 søka（寻找） 加后缀 'cai（者）构成，复数形式 søka'caip。
+example_sentence:1.Io poëtz ö søka'cai。###我是一名搜索者。
