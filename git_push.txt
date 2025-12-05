@@ -2,3 +2,6 @@ git add .
 git commit -m "提交信息"
 git branch -M main
 git push -u origin main
+
+aldra 修改
+pleta sanap 添加词汇

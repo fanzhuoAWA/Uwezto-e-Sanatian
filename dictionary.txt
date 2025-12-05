@@ -2135,9 +2135,9 @@ part_of_speech:adj.
 phonetic_symbols:暂无
 
 word:nwah
-explanation:外来的人（游客、外国人、外地人……）；不分性别的称呼（靓仔/靓女、伙计……）；（贬义，就是说某人穿的人模狗样）绅士@@@表示震惊、惊讶；表示愤怒；表示兴奋；表示赞赏；表示（被）惊吓；表示疑问；表示轻蔑；表示惊叹@@@他；她；它
+explanation:外来的人（游客、外国人、外地人……）；不分性别的称呼（靓仔/靓女、伙计、bro……）；绅士（贬义，指某人穿的人模狗样）@@@表示震惊、惊讶；表示愤怒；表示兴奋；表示赞赏；表示（被）惊吓；表示疑问；表示轻蔑；表示惊叹@@@他；她；它（不常用）
 part_of_speech:n.@@@int.@@@pron.
-phonetic_symbols:/nwaɬ/
+phonetic_symbols:/nwʌh/
 example_sentence:1.nwah?!😨###卧槽？！😨
 
 word:kownmont
@@ -3105,3 +3105,47 @@ part_of_speech:n.
 phonetic_symbols:/ˈsø.ka.ˌt͡saɪ̯/
 grammar_note:由 søka（寻找） 加后缀 'cai（者）构成，复数形式 søka'caip。
 example_sentence:1.Io poëtz ö søka'cai。###我是一名搜索者。
+
+word:pleta
+explanation:添加；附加；增补
+part_of_speech:vt.
+phonetic_symbols:/ˈple.ta/
+grammar_note:过去式 pletaz，名词化形式 pletað（添加行为），可接 of 引出添加对象。
+example_sentence:1.Io pleta ö sana of sanatian.###我添加一个词到词典中。
+
+word:pletasana
+explanation:被添加的词汇；新增词
+part_of_speech:n.
+phonetic_symbols:/ˈple.ta.sænə/
+grammar_note:由 pleta（添加） 和 sana（词语） 组合而成，复数形式 pletasanap。
+example_sentence:1.Phow poëtz ö pletasana。###这是一个新增词。
+
+word:pleta'cai
+explanation:添加者；贡献者
+part_of_speech:n.
+phonetic_symbols:/ˈple.ta.ˌt͡saɪ̯/
+grammar_note:由 pleta（添加） 加后缀 'cai（者）构成，复数形式 pleta'caip。
+example_sentence:1.Io poëtz ö pleta'cai of Uweztoße'sanatian.###我是乌斯托什语词典的一位添加者（贡献者）。
+
+word:vahcen
+explanation:光荣；荣耀
+part_of_speech:n.
+phonetic_symbols:/vʌh.sɪn/
+example_sentence:1.Vahcen'fa'Uweztoß!###光荣属于乌斯托什！
+
+word:vahcenphk
+explanation:光荣的
+part_of_speech:adj.
+phonetic_symbols:/vʌh.sɪn.fɪk/
+
+word:weao
+explanation:喵
+part_of_speech:int.
+phonetic_symbols:/w(ɪ)ʌɒ/
+grammar_note:拟声词
+
+word:meao
+explanation:喵
+part_of_speech:int.
+phonetic_symbols:/mɪʌɒ/
+grammar_note:拟声词
