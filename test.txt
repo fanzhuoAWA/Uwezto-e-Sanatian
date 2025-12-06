@@ -1,3 +1,4 @@
+/* 如果想要深绿色主题色，就把这个替换掉style.css */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +25,7 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #4a6fa5 0%, #2c3e50 100%);
+    background: linear-gradient(90deg, #003d20 0%, #002814 100%);
     color: white;
     padding: 25px 30px;
     text-align: center;
@@ -69,7 +70,7 @@ h1 {
 }
 
 #searchBtn {
-    background-color: #4a6fa5;
+    background-color: #003d20;
     color: white;
     border: none;
     padding: 15px 25px;
@@ -80,7 +81,7 @@ h1 {
 }
 
 #searchBtn:hover {
-    background-color: #3a5a80;
+    background-color: #002814;
 }
 
 .search-options {
@@ -145,9 +146,9 @@ h1 {
 }
 
 .alphabet-btn.active {
-    background-color: #4a6fa5;
+    background-color: #003d20;
     color: white;
-    border-color: #4a6fa5;
+    border-color: #003d20;
 }
 
 .category-filter {
@@ -172,9 +173,9 @@ h1 {
 }
 
 .category-btn.active {
-    background-color: #2c3e50;
+    background-color: #003d20;
     color: white;
-    border-color: #2c3e50;
+    border-color: #003d20;
 }
 
 .main-content {
@@ -238,7 +239,7 @@ h1 {
 .part-of-speech {
     display: inline-block;
     background-color: #e8f4fd;
-    color: #4a6fa5;
+    color: #003d20;
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -260,7 +261,7 @@ h1 {
 
 .section-title {
     font-size: 1rem;
-    color: #4a6fa5;
+    color: 	#003d20;
     font-weight: 600;
     margin-bottom: 10px;
     display: flex;
@@ -278,7 +279,7 @@ h1 {
     padding: 12px 16px;
     border-radius: 8px;
     margin-bottom: 10px;
-    border-left: 3px solid #4a6fa5;
+    border-left: 3px solid #003d20;
 }
 
 .example-original {
@@ -349,7 +350,7 @@ footer {
 
 .senses-section .section-title {
     font-size: 1rem;
-    color: #4a6fa5;
+    color: #003d20;
     font-weight: 600;
     margin-bottom: 10px;
     display: flex;
@@ -383,7 +384,7 @@ footer {
 .sense-pos {
     display: inline-block;
     background-color: #e8f4fd;
-    color: #4a6fa5;
+    color: #003d20;
     padding: 2px 8px;
     border-radius: 12px;
     font-size: 0.8rem;
@@ -436,4 +437,5 @@ footer {
     .word {
         font-size: 1.6rem;
     }
+    
 }
