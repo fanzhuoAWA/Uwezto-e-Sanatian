@@ -441,6 +441,27 @@ footer {
     background-color: #3a5a80;
     border-color: #3a5a80;
 }
+/* 文化注释区块 */
+.cultural-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eef2f7;
+}
+
+.cultural-section .section-title::before {
+    content: "🏛️";
+}
+
+.cultural-content {
+    background-color: #f0f8ff; /* 淡蓝色背景，与文化相关 */
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #b0e0e6;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    line-height: 1.5;
+    font-style: italic;
+}
 @media (max-width: 768px) {
     .dictionary-content {
         flex-direction: column;

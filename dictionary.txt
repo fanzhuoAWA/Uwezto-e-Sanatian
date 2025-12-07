@@ -459,7 +459,7 @@ part_of_speech:adj.
 phonetic_symbols:暂无
 
 word:pofbtozB
-explanation:B
+explanation:屄（女子外生殖器）
 part_of_speech:n.
 phonetic_symbols:暂无
 
@@ -1246,7 +1246,7 @@ part_of_speech:adj.@@@adv.
 phonetic_symbols:暂无
 
 word:diao
-explanation:√8；几把
+explanation:阴茎（男性生殖器官）
 part_of_speech:n.
 phonetic_symbols:暂无
 
@@ -2218,7 +2218,7 @@ phonetic_symbols:暂无
 grammar_note:根据语境判断是我自己、你自己、他自己、她自己还是他自己，带有贬义的：ötd
 
 word:chotpög
-explanation:屄
+explanation:屄（女子外生殖器）
 part_of_speech:n.
 phonetic_symbols:暂无
 
@@ -3149,3 +3149,161 @@ explanation:喵
 part_of_speech:int.
 phonetic_symbols:/mɪʌɒ/
 grammar_note:拟声词
+
+word:Matka
+explanation:地球；大地母亲；家园；故土；大地
+part_of_speech:n.
+phonetic_symbols:/ˈmat.ka/
+cultural_note:玛特卡·泽姆利亚（Matka Ziemia），大地母亲。
+
+word:Mesi
+explanation:月亮；月神梅西亚茨；梦境与潮汐之主
+part_of_speech:n.
+phonetic_symbols:/ˈme.si/
+grammar_note:专有名词。月神（Mesyats） 的日常昵称。
+
+word:Rarog
+explanation:水星；火鹰；信使之星
+part_of_speech:n.
+phonetic_symbols:/ˈra.rog/
+grammar_note:专有名词。源自西斯拉夫神话中的火精灵 Rarog，形似鹰隼，司掌火焰与转变。
+cultural_note:因其运行速度最快，被视作在Aean（太阳）与Matka（大地）之间传递消息的信使，也象征思维的敏捷与交易的迅速。
+
+word:Denica
+explanation:金星（晨星）；晨星女神丹尼察；黎明使者
+part_of_speech:n.
+phonetic_symbols:/ˈde.ni.t͡sa/
+grammar_note:专有名词。直接源于斯拉夫晨星与光明女神 Denica。
+cultural_note:她的出现宣告黑夜结束，带来希望与新的开始。常与纯洁、美丽和守护旅途联系在一起。
+
+word:Veczera
+explanation:金星（晚星）；晚星女神韦切尔卡；黄昏守护者
+part_of_speech:n.
+phonetic_symbols:/ˈve.t͡ʃe.ra/
+grammar_note:专有名词。源于斯拉夫晚星女神 Vechernitsa，是 Denica 的姐妹或另一面相。
+cultural_note:守护着归家的人与夜晚的安宁，象征反省、休息与家庭的温暖。与 Denica 同体，展现星辰的双重性。
+
+word:Siv
+explanation:火星；红色的战星；勇士
+part_of_speech:n.
+phonetic_symbols:/siv/
+grammar_note:专有名词，无复数。其发音短促有力，辅音/v/带嗡鸣，象征战争喧嚣。
+cultural_note:不仅指行星，也用于形容勇猛的战士 (rae lo'Siv'lyness)。其红光被视为战神 Perun 或战神 Siva 在天空的凝视，是冲突、热血与勇气的象征。
+example_sentence:1.Siv kmnoz of ofrö, poëtz boom'aeanes!###火星从后方来，是战争之兆！（古谚）
+
+word:Svar
+explanation:木星；天父斯瓦罗格；巨人之星
+part_of_speech:n.
+phonetic_symbols:/ˈsvar/
+grammar_note:专有名词。源自从最高神 Svarog（天、火、铁匠之神）之名截取的词干。
+cultural_note:作为夜空中最亮的星体之一（仅次于金星），其巨大与明亮被视为天父的权威、创造力与对世界的锻造。也常被视为守护神和律法的源头。
+
+word:Veles
+explanation:土星；冥神韦莱斯；时光之环
+part_of_speech:n.
+phonetic_symbols:/ˈve.les/
+grammar_note:专有名词。直接源于斯拉夫大地、冥界、魔法与畜群之神 Veles。
+cultural_note:其缓慢的行进和可见的环带，被视为 Veles 神掌管地下财富、周期循环与神秘知识的体现。象征缓慢、耐心、古老的智慧与业力。
+
+word:xlina
+explanation:倾斜；倒下；偏离@@@倾斜的
+part_of_speech:vi.@@@adj.
+phonetic_symbols:/ˈksli.na/
+grammar_note:形容物体偏离垂直或标准角度。
+example_sentence:1.Dat'hovn lo'xlina。###那座楼是倾斜的。
+
+word:Xlinastre
+explanation:天王星；倾斜之星
+part_of_speech:n.
+phonetic_symbols:/ksli.ˈnast.ʁə/
+grammar_note:复合词，由 xlina（倾斜）与 astre（天体）组合。指其独特的“躺着”自转的姿态。
+cultural_note:此名不带神话色彩，纯粹基于18世纪望远镜发现后的科学观测，标志着一个全新认知时代的开始。
+
+word:blu
+explanation:蓝色的；蔚蓝的@@@蓝色；蔚蓝
+part_of_speech:adj.@@@n.
+phonetic_symbols:/blu/
+example_sentence:1.Oñergkul lo'blu。###大海是蓝色的。
+
+word:Bluastre
+explanation:海王星；蓝色之星
+part_of_speech:n.
+phonetic_symbols:/blu.ˈast.ʁə/
+grammar_note:复合词，由 blu（蓝色）与 astre（天体）组合。
+cultural_note:其命名依据是19世纪通过光谱分析发现其大气富含甲烷，因而呈现独特的蓝色。这是一个基于物理化学属性的现代名称。
+
+word:Plana
+explanation:行星；漫游者
+part_of_speech:n.
+phonetic_symbols:/ˈpla.na/
+grammar_note:复数 Planap。源自原始词根 plan-（游荡、漫步），形容它们在星空中移动的特性。
+
+word:Otpoké
+explanation:奥特帕克埃（人名，男）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Nwaht
+explanation:拿瓦哈特（人名，男）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Osopöß
+explanation:奥索帕什（姓氏）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Hvotk
+explanation:何沃特克（人名，女）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Parse
+explanation:帕瑟（人名，女）
+part_of_speech:n.
+grammar_note:可简写为 P. 。乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Atömz
+explanation:阿塔茉子（姓氏）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Vavot
+explanation:瓦沃特（人名，男）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Noop
+explanation:诺普（人名，女）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Cxka
+explanation:西喀（人名，女）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Himun
+explanation:刑木（姓氏）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Neёtak
+explanation:尼塔克（人名，男）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Menña
+explanation:门娜（人名，女）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Facka
+explanation:费卡（人名，女）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
+
+word:Unep
+explanation:尤尼普（姓氏）
+part_of_speech:n.
+grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。

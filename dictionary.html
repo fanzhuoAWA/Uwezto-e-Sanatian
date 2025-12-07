@@ -161,6 +161,7 @@
                             senses: [], // 存储词性-释义对
                             examples: [],
                             grammar_notes: [],
+                            cultural_notes: [],
                             _pendingExplanation: '', // 临时存储释义文本
                             _pendingPartOfSpeech: '' // 临时存储词性文本
                         };
@@ -197,6 +198,11 @@
                     case 'grammar_note':
                         if (currentEntry) currentEntry.grammar_notes.push(value);
                         break;
+
+                    case 'cultural_note':
+                        if (currentEntry) currentEntry.cultural_notes.push(value);
+                        break;
+
                 }
             }
 
@@ -296,35 +302,35 @@
             alphabetFilter.appendChild(allBtn);
 
             // 按字母表顺序定义所有字母（包含特殊字母）
-const alphabetOrder = [
-    'A', 'B', 'C', 'D', 'Ð', 'E', 'É', 'Ë', 'F', 'G', 'H', 'I',
-    'J', 'K', 'L', 'Ł', 'M', 'N', 'Ñ', 'O', 'Ö', 'P', 'Q', 'R', 'S',
-    'ß', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-];
+            const alphabetOrder = [
+                'A', 'B', 'C', 'D', 'Ð', 'E', 'É', 'Ë', 'F', 'G', 'H', 'I',
+                'J', 'K', 'L', 'Ł', 'M', 'N', 'Ñ', 'O', 'Ö', 'P', 'Q', 'R', 'S',
+                'ß', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+            ];
 
-// 为每个字母添加按钮（按字母表顺序）
-alphabetOrder.forEach((letter, index) => {
-    const btn = document.createElement('button');
-    btn.className = 'alphabet-btn';
-    btn.textContent = letter;
+            // 为每个字母添加按钮（按字母表顺序）
+            alphabetOrder.forEach((letter, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'alphabet-btn';
+                btn.textContent = letter;
 
-    // 设置筛选用的字母（统一转换为小写）
-    let filterLetter = letter.toLowerCase();
-    btn.dataset.letter = filterLetter;
-    
-    // 给第9个以后的按钮添加折叠类（显示前8个字母：A-Ë）
-    // 索引从0开始，所以索引8及以后折叠（即第9个开始）
-    if (index >= 8) {
-        btn.classList.add('folded');
-    }
+                // 设置筛选用的字母（统一转换为小写）
+                let filterLetter = letter.toLowerCase();
+                btn.dataset.letter = filterLetter;
 
-    btn.addEventListener('click', function () {
-        document.querySelectorAll('.alphabet-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        filterWords();
-    });
-    alphabetFilter.appendChild(btn);
-});
+                // 给第9个以后的按钮添加折叠类（显示前8个字母：A-Ë）
+                // 索引从0开始，所以索引8及以后折叠（即第9个开始）
+                if (index >= 8) {
+                    btn.classList.add('folded');
+                }
+
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.alphabet-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterWords();
+                });
+                alphabetFilter.appendChild(btn);
+            });
 
             document.querySelectorAll('.category-btn').forEach(btn => {
                 btn.addEventListener('click', function () {
@@ -348,30 +354,30 @@ alphabetOrder.forEach((letter, index) => {
         }
 
         // 展开/折叠字母按钮功能
-function toggleAlphabetButtons() {
-    const alphabetFilter = document.getElementById('alphabetFilter');
-    const toggleBtn = document.getElementById('toggleAlphabetBtn');
-    const foldedButtons = alphabetFilter.querySelectorAll('.alphabet-btn.folded');
-    
-    if (foldedButtons.length > 0) {
-        // 展开隐藏的按钮
-        foldedButtons.forEach(btn => {
-            btn.classList.remove('folded');
-        });
-        toggleBtn.textContent = '折叠字母（▲）';
-        toggleBtn.classList.add('active'); // 添加active类，变成蓝色
-    } else {
-        // 折叠除了前8个字母按钮以外的按钮
-        const allAlphabetBtns = alphabetFilter.querySelectorAll('.alphabet-btn:not([data-letter="all"])');
-        allAlphabetBtns.forEach((btn, index) => {
-            if (index >= 8) {
-                btn.classList.add('folded');
+        function toggleAlphabetButtons() {
+            const alphabetFilter = document.getElementById('alphabetFilter');
+            const toggleBtn = document.getElementById('toggleAlphabetBtn');
+            const foldedButtons = alphabetFilter.querySelectorAll('.alphabet-btn.folded');
+
+            if (foldedButtons.length > 0) {
+                // 展开隐藏的按钮
+                foldedButtons.forEach(btn => {
+                    btn.classList.remove('folded');
+                });
+                toggleBtn.textContent = '折叠字母（▲）';
+                toggleBtn.classList.add('active'); // 添加active类，变成蓝色
+            } else {
+                // 折叠除了前8个字母按钮以外的按钮
+                const allAlphabetBtns = alphabetFilter.querySelectorAll('.alphabet-btn:not([data-letter="all"])');
+                allAlphabetBtns.forEach((btn, index) => {
+                    if (index >= 8) {
+                        btn.classList.add('folded');
+                    }
+                });
+                toggleBtn.textContent = '展开更多字母（▼）';
+                toggleBtn.classList.remove('active'); // 移除active类，变成白色
             }
-        });
-        toggleBtn.textContent = '展开更多字母（▼）';
-        toggleBtn.classList.remove('active'); // 移除active类，变成白色
-    }
-}
+        }
 
         function displayWords(words) {
             const wordList = document.getElementById('wordList');
@@ -457,10 +463,23 @@ function toggleAlphabetButtons() {
             `;
                 }
 
+                let culturalSection = '';
+if (item.cultural_notes && item.cultural_notes.length > 0) {
+    const notesHTML = item.cultural_notes.map(note => `<div>${note}</div>`).join('');
+    culturalSection = `
+        <div class="cultural-section">
+            <div class="section-title">文化注释</div>
+            <div class="cultural-content">
+                ${notesHTML}
+            </div>
+        </div>
+    `;
+}
+
                 // 组合所有部分
                 wordCard.appendChild(wordHeader);
                 wordCard.appendChild(sensesSection);
-                wordCard.innerHTML += examplesSection + grammarSection;
+                wordCard.innerHTML += examplesSection + grammarSection + culturalSection;
                 wordList.appendChild(wordCard);
             });
         }
