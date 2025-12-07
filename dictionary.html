@@ -53,6 +53,8 @@
                     <!-- 字母按钮将通过JavaScript生成 -->
                 </div>
 
+                <button id="toggleAlphabetBtn" class="toggle-btn">展开更多字母 (▼)</button>
+
                 <h3 style="margin-bottom: 15px; color: #2c3e50; margin-top: 25px;">按类别筛选</h3>
                 <div class="category-filter" id="categoryFilter">
                     <button class="category-btn active" data-category="all">全部词汇</button>
@@ -293,19 +295,36 @@
             });
             alphabetFilter.appendChild(allBtn);
 
-            // 为每个字母添加按钮
-            'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(letter => {
-                const btn = document.createElement('button');
-                btn.className = 'alphabet-btn';
-                btn.textContent = letter;
-                btn.dataset.letter = letter;
-                btn.addEventListener('click', function () {
-                    document.querySelectorAll('.alphabet-btn').forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    filterWords();
-                });
-                alphabetFilter.appendChild(btn);
-            });
+            // 按字母表顺序定义所有字母（包含特殊字母）
+const alphabetOrder = [
+    'A', 'B', 'C', 'D', 'Ð', 'E', 'É', 'Ë', 'F', 'G', 'H', 'I',
+    'J', 'K', 'L', 'Ł', 'M', 'N', 'Ñ', 'O', 'Ö', 'P', 'Q', 'R', 'S',
+    'ß', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+];
+
+// 为每个字母添加按钮（按字母表顺序）
+alphabetOrder.forEach((letter, index) => {
+    const btn = document.createElement('button');
+    btn.className = 'alphabet-btn';
+    btn.textContent = letter;
+
+    // 设置筛选用的字母（统一转换为小写）
+    let filterLetter = letter.toLowerCase();
+    btn.dataset.letter = filterLetter;
+    
+    // 给第9个以后的按钮添加折叠类（显示前8个字母：A-Ë）
+    // 索引从0开始，所以索引8及以后折叠（即第9个开始）
+    if (index >= 8) {
+        btn.classList.add('folded');
+    }
+
+    btn.addEventListener('click', function () {
+        document.querySelectorAll('.alphabet-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        filterWords();
+    });
+    alphabetFilter.appendChild(btn);
+});
 
             document.querySelectorAll('.category-btn').forEach(btn => {
                 btn.addEventListener('click', function () {
@@ -323,8 +342,36 @@
             document.getElementById('searchType').addEventListener('change', filterWords);
             document.getElementById('caseSensitive').addEventListener('change', filterWords);
 
+            document.getElementById('toggleAlphabetBtn').addEventListener('click', toggleAlphabetButtons);
+
             displayWords(dictionaryData);
         }
+
+        // 展开/折叠字母按钮功能
+function toggleAlphabetButtons() {
+    const alphabetFilter = document.getElementById('alphabetFilter');
+    const toggleBtn = document.getElementById('toggleAlphabetBtn');
+    const foldedButtons = alphabetFilter.querySelectorAll('.alphabet-btn.folded');
+    
+    if (foldedButtons.length > 0) {
+        // 展开隐藏的按钮
+        foldedButtons.forEach(btn => {
+            btn.classList.remove('folded');
+        });
+        toggleBtn.textContent = '折叠字母（▲）';
+        toggleBtn.classList.add('active'); // 添加active类，变成蓝色
+    } else {
+        // 折叠除了前8个字母按钮以外的按钮
+        const allAlphabetBtns = alphabetFilter.querySelectorAll('.alphabet-btn:not([data-letter="all"])');
+        allAlphabetBtns.forEach((btn, index) => {
+            if (index >= 8) {
+                btn.classList.add('folded');
+            }
+        });
+        toggleBtn.textContent = '展开更多字母（▼）';
+        toggleBtn.classList.remove('active'); // 移除active类，变成白色
+    }
+}
 
         function displayWords(words) {
             const wordList = document.getElementById('wordList');
@@ -429,11 +476,15 @@
 
             let filteredWords = dictionaryData;
 
-            // 字母筛选
+            // 字母筛选（统一转换为小写比较）
             if (activeLetter !== 'all') {
-                filteredWords = filteredWords.filter(item =>
-                    item.word.charAt(0).toUpperCase() === activeLetter
-                );
+                filteredWords = filteredWords.filter(item => {
+                    if (!item.word || item.word.length === 0) return false;
+
+                    const firstChar = item.word.charAt(0);
+                    // 将首字母转换为小写，与activeLetter（已存储为小写）比较
+                    return firstChar.toLowerCase() === activeLetter;
+                });
             }
 
             // 类别筛选 - 适配新的 senses 结构
