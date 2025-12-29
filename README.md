@@ -28,66 +28,11 @@
 
 你可以添加你的词库内容了！
 
-一条词汇的格式是这样的：
+运行自动添加程序：终端输入 `python add_word.py` ，简单易懂，跟着提示来就行了。
 
-```txt
+![](https://image.fanzhuo.xyz/file/AgACAgUAAyEGAASKws10AAOiaVKI7ad92S--cykte2j0ZD7yl7MAAggOaxuqx5FWNQOiBVye6BkBAAMCAAN5AAM2BA.png)
 
-word:<词（必要）>
-explanation:<释义（必要）>
-part_of_speech:<词性（必要）>
-phonetic_symbols:<音标（可选）>
-example_sentence:<例句（可选）>
-cultural_note:<来源（可选）>
-grammar_note:<语法解析（可选）>
-
-```
-
-两个词之间用空格隔开。
-
-重要解释↓
-
-#### explanation & part_of_speech
-
-这两个是释义和词性。如果这个词有两个词性，比如 `n.` 和 `v.` 那你可以在两个词性之间添加 `@@@` ，并在两个词性的两个释义之间也添加 `@@@` ，就像这样：
-
-```txt
-
-explanation:蓝色的；蔚蓝的@@@蓝色；蔚蓝
-part_of_speech:adj.@@@n.
-
-```
-
-这里顺序很重要，是一一按顺序对应的， `蓝色的；蔚蓝的` 对应 `adj.` ， `蓝色；蔚蓝` 对应 `n.` 。・ω・。
-
-#### example_sentence
-
-这个是例句，格式是 `<序号>.<原句>###<翻译>。` ，序号就是 1、2、3、4这些，如果你有多个例句，请使用多个 `example_sentence` ，并将序号按例句的编号写，例如这是两个例句的情况：
-
-```txt
-
-example_sentence:1.Io aldra ö sana of sanatian.###我修改词典中的一个词。
-example_sentence:2.Ao oulue aldra dat'projekt'initz?###你可以修改那个项目初始化吗？
-
-```
-
-#### 演示
-
-所以，一个符合格式的词典应该是这样的（这题展示两个词）：
-
-```txt
-
-word:compra
-explanation:理解；领会
-part_of_speech:vt.
-phonetic_symbols:/kɒm.pra/
-grammar_note:过去式：compraz（表示“已经理解”）
-
-word:vlook
-explanation:看起来地
-part_of_speech:adv.
-phonetic_symbols:/vlʊk/
-
-```
+ok，你可以去到下面的部署环节了。
 
 ### 个性化修改
 
@@ -162,12 +107,10 @@ A1：人造语言吧里的那个软件只支持安卓，且离线，数据（词
 
 Q2：缺点呢？
 
-A2：那个软件下载安装了直接就能用， sanatian 搭建相比之下比较麻烦，并且需要修改 `dictionary.txt` 来添加词汇。
+A2：那个软件下载安装了直接就能用， sanatian 搭建相比之下比较麻烦。
 
 ## TODO
 
-1、添加方便的增加词汇方法（可能会内置一个exe程序）。
-
-2、支持 `SQLite` 数据库格式。
+1、支持 `SQLite` 数据库格式。
 
 如果你有什么改进意见，欢迎提交Issues。
