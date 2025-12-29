@@ -32,8 +32,6 @@
 
 ![](https://image.fanzhuo.xyz/file/AgACAgUAAyEGAASKws10AAOiaVKI7ad92S--cykte2j0ZD7yl7MAAggOaxuqx5FWNQOiBVye6BkBAAMCAAN5AAM2BA.png)
 
-ok，你可以去到下面的部署环节了。
-
 ### 个性化修改
 
 #### 按首字母筛选
