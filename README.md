@@ -30,7 +30,7 @@
 
 运行自动添加程序：终端输入 `python add_word.py` ，简单易懂，跟着提示来就行了。
 
-![](https://image.fanzhuo.xyz/file/AgACAgUAAyEGAASKws10AAOiaVKI7ad92S--cykte2j0ZD7yl7MAAggOaxuqx5FWNQOiBVye6BkBAAMCAAN5AAM2BA.png)
+![词典词条添加工具](https://image.fanzhuo.xyz/file/AgACAgUAAyEGAASKws10AAOiaVKI7ad92S--cykte2j0ZD7yl7MAAggOaxuqx5FWNQOiBVye6BkBAAMCAAN5AAM2BA.png)
 
 ### 个性化修改
 
@@ -85,11 +85,7 @@ const alphabetOrder = [
 
 然后，更改远程仓库为ssh*（如果是通过ssh克隆的不用改），输入 `git remote set-url origin git@github.com:xxx/xxx` 。
 
-提交所有文件 `git add .` 。
-
-发布本地提交 `git commit -m "项目初始化"` 。
-
-将本地更改提交到远程仓库 `git push` 。
+之后跟着 `git_push.txt` 里的内容来提交。
 
 ## 部署
 
