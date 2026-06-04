@@ -1,5 +1,0 @@
-# 让 dictionary.html 正常访问自身（不触发重写）
-/dictionary.html    /dictionary.html    200
-
-# 其他所有路径都重写到 dictionary.html
-/*    /dictionary.html    200
