@@ -28,6 +28,7 @@ header {
     color: white;
     padding: 25px 30px;
     text-align: center;
+    position: relative;
 }
 
 h1 {
@@ -268,10 +269,7 @@ h1 {
     gap: 8px;
 }
 
-.section-title::before {
-    content: "💬";
-    font-size: 0.9em;
-}
+
 
 .example-item {
     background-color: #f8fafc;
@@ -303,9 +301,7 @@ h1 {
     border-top: 1px solid #eef2f7;
 }
 
-.grammar-section .section-title::before {
-    content: "🔧";
-}
+
 
 .grammar-content {
     background-color: #fffdf6;
@@ -335,6 +331,15 @@ footer {
     background-color: #f8f9fa;
 }
 
+footer a {
+    color: #4a6fa5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .status {
     margin-top: 10px;
     color: #4a6fa5;
@@ -357,10 +362,7 @@ footer {
     gap: 8px;
 }
 
-.senses-section .section-title::before {
-    content: "📖";
-    font-size: 0.9em;
-}
+
 
 .senses-list {
     display: flex;
@@ -448,9 +450,7 @@ footer {
     border-top: 1px solid #eef2f7;
 }
 
-.cultural-section .section-title::before {
-    content: "🏛️";
-}
+
 
 .cultural-content {
     background-color: #f0f8ff; /* 淡蓝色背景，与文化相关 */
@@ -499,4 +499,208 @@ footer {
         font-size: 1.6rem;
     }
     
+}
+
+/* ===== 亮暗模式切换按钮 ===== */
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+    line-height: 1;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== 暗色模式 ===== */
+html.dark body {
+    background: linear-gradient(135deg, #1b1f2a 0%, #0e1117 100%);
+    color: #d5d9e2;
+}
+
+html.dark .container {
+    background-color: #1c2128;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+html.dark .search-container {
+    background-color: #1a1f26;
+    border-bottom: 1px solid #2a3038;
+}
+
+html.dark #searchInput {
+    background-color: #242a32;
+    border: 2px solid #3a4350;
+    color: #e6e8ee;
+}
+
+html.dark #searchInput::placeholder {
+    color: #7d8594;
+}
+
+html.dark #searchInput:focus {
+    border-color: #6c8fc9;
+    box-shadow: 0 0 0 3px rgba(108, 143, 201, 0.25);
+}
+
+html.dark .search-options label,
+html.dark .results-info {
+    color: #9aa3b2;
+}
+
+html.dark #searchType {
+    background-color: #242a32;
+    border: 1px solid #3a4350;
+    color: #e6e8ee;
+}
+
+html.dark .sidebar {
+    background-color: #181c22;
+    border-right: 1px solid #2a3038;
+}
+
+html.dark .sidebar h3 {
+    color: #aeb8c7 !important;
+}
+
+html.dark .alphabet-btn,
+html.dark .category-btn,
+html.dark .toggle-btn {
+    background-color: #242a32;
+    border-color: #3a4350;
+    color: #d5d9e2;
+}
+
+html.dark .alphabet-btn:hover,
+html.dark .category-btn:hover,
+html.dark .toggle-btn:hover {
+    background-color: #313947;
+}
+
+html.dark .alphabet-btn.active,
+html.dark .category-btn.active,
+html.dark .toggle-btn.active {
+    background-color: #4a6fa5;
+    border-color: #4a6fa5;
+    color: white;
+}
+
+html.dark .word-card {
+    background-color: #1f242c;
+    border: 1px solid #2a3038;
+}
+
+html.dark .word-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .word-header {
+    border-bottom-color: #2c333d;
+}
+
+html.dark .word {
+    color: #e6e8ee;
+}
+
+html.dark .pronunciation {
+    color: #93a0b3;
+}
+
+html.dark .section-title {
+    color: #7ea8d8;
+}
+
+html.dark .sense-item {
+    border-bottom-color: #2a3038;
+}
+
+html.dark .sense-pos {
+    background-color: #22314a;
+    color: #7ea8d8;
+}
+
+html.dark .sense-explanation {
+    color: #d5d9e2;
+}
+
+html.dark .example-item {
+    background-color: #181d24;
+    border-left-color: #4a6fa5;
+}
+
+html.dark .example-original {
+    color: #d5d9e2;
+}
+
+html.dark .example-translation {
+    color: #8b96a5;
+    border-top-color: #333b46;
+}
+
+html.dark .grammar-section,
+html.dark .cultural-section {
+    border-top-color: #2a3038;
+}
+
+html.dark .grammar-content {
+    background-color: #242218;
+    border-color: #4f4a28;
+    color: #b8b3a0;
+}
+
+html.dark .cultural-content {
+    background-color: #15202b;
+    border-color: #1e3a4d;
+    color: #b7cad9;
+}
+
+html.dark .no-results {
+    color: #7d8594;
+}
+
+html.dark footer {
+    background-color: #161a20;
+    color: #8b96a5;
+    border-top-color: #2a3038;
+}
+
+html.dark footer a {
+    color: #7ea8d8;
+}
+
+/* 暗色模式滚动条 */
+html.dark ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+    background: #1a1f26;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    background: #3a4350;
+    border-radius: 5px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #4a5565;
+}
+
+html.dark body,
+html.dark .sidebar,
+html.dark .main-content {
+    scrollbar-width: thin;
+    scrollbar-color: #3a4350 #1a1f26;
 }

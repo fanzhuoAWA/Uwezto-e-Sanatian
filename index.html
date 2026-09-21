@@ -9,12 +9,18 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- 为了更好的兼容性，可以同时添加下面这行 -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
 </head>
 
 <body>
     <div class="container">
         <header>
             <h1>Uweztoße Sanatian</h1>
+            <button id="themeToggle" class="theme-toggle" title="切换亮暗模式">暗</button>
         </header>
 
         <div class="search-container">
@@ -53,7 +59,7 @@
                     <!-- 字母按钮将通过JavaScript生成 -->
                 </div>
 
-                <button id="toggleAlphabetBtn" class="toggle-btn">展开更多字母 (▼)</button>
+                <button id="toggleAlphabetBtn" class="toggle-btn">展开更多字母</button>
 
                 <h3 style="margin-bottom: 15px; color: #2c3e50; margin-top: 25px;">按类别筛选</h3>
                 <div class="category-filter" id="categoryFilter">
@@ -80,7 +86,7 @@
         </div>
 
         <footer>
-            <p>词典数据来源：Fanzhuo | 版权所有 © 2025 Fanzhuo - 保留所有权利</p>
+            <p>词典数据来源：<a href="https://fanzhuo.xyz/" target="_blank">Fanzhuo</a> | 版权所有 © 2025-<span id="currentYear">2025</span> Fanzhuo 保留所有权利</p>
         </footer>
     </div>
 
@@ -364,7 +370,7 @@
                 foldedButtons.forEach(btn => {
                     btn.classList.remove('folded');
                 });
-                toggleBtn.textContent = '折叠字母（▲）';
+                toggleBtn.textContent = '折叠字母';
                 toggleBtn.classList.add('active'); // 添加active类，变成蓝色
             } else {
                 // 折叠除了前8个字母按钮以外的按钮
@@ -374,7 +380,7 @@
                         btn.classList.add('folded');
                     }
                 });
-                toggleBtn.textContent = '展开更多字母（▼）';
+                toggleBtn.textContent = '展开更多字母';
                 toggleBtn.classList.remove('active'); // 移除active类，变成白色
             }
         }
@@ -705,6 +711,19 @@ if (item.cultural_notes && item.cultural_notes.length > 0) {
         }
 
         document.addEventListener('DOMContentLoaded', loadDictionary);
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const themeToggle = document.getElementById('themeToggle');
+        function applyTheme(theme) {
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            themeToggle.textContent = theme === 'dark' ? '亮' : '暗';
+        }
+        applyTheme(localStorage.getItem('theme') || 'light');
+        themeToggle.addEventListener('click', () => {
+            const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+        });
     </script>
 </body>
 

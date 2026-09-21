@@ -29,6 +29,7 @@ header {
     color: white;
     padding: 25px 30px;
     text-align: center;
+    position: relative;
 }
 
 h1 {
@@ -269,10 +270,7 @@ h1 {
     gap: 8px;
 }
 
-.section-title::before {
-    content: "💬";
-    font-size: 0.9em;
-}
+
 
 .example-item {
     background-color: #f8fafc;
@@ -304,9 +302,7 @@ h1 {
     border-top: 1px solid #eef2f7;
 }
 
-.grammar-section .section-title::before {
-    content: "🔧";
-}
+
 
 .grammar-content {
     background-color: #fffdf6;
@@ -336,6 +332,15 @@ footer {
     background-color: #f8f9fa;
 }
 
+footer a {
+    color: #4a6fa5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .status {
     margin-top: 10px;
     color: #4a6fa5;
@@ -358,10 +363,7 @@ footer {
     gap: 8px;
 }
 
-.senses-section .section-title::before {
-    content: "📖";
-    font-size: 0.9em;
-}
+
 
 .senses-list {
     display: flex;
@@ -438,4 +440,208 @@ footer {
         font-size: 1.6rem;
     }
     
+}
+
+/* ===== 亮暗模式切换按钮 ===== */
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+    line-height: 1;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== 暗色模式 ===== */
+html.dark body {
+    background: linear-gradient(135deg, #101a16 0%, #070d0a 100%);
+    color: #cdd8d2;
+}
+
+html.dark .container {
+    background-color: #19221d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+html.dark .search-container {
+    background-color: #16201a;
+    border-bottom: 1px solid #263129;
+}
+
+html.dark #searchInput {
+    background-color: #202b24;
+    border: 2px solid #33483a;
+    color: #e2e8e4;
+}
+
+html.dark #searchInput::placeholder {
+    color: #7d8d82;
+}
+
+html.dark #searchInput:focus {
+    border-color: #3f9464;
+    box-shadow: 0 0 0 3px rgba(63, 148, 100, 0.25);
+}
+
+html.dark .search-options label,
+html.dark .results-info {
+    color: #93a49a;
+}
+
+html.dark #searchType {
+    background-color: #202b24;
+    border: 1px solid #33483a;
+    color: #e2e8e4;
+}
+
+html.dark .sidebar {
+    background-color: #141c17;
+    border-right: 1px solid #263129;
+}
+
+html.dark .sidebar h3 {
+    color: #b3c4ba !important;
+}
+
+html.dark .alphabet-btn,
+html.dark .category-btn,
+html.dark .toggle-btn {
+    background-color: #202b24;
+    border-color: #33483a;
+    color: #cdd8d2;
+}
+
+html.dark .alphabet-btn:hover,
+html.dark .category-btn:hover,
+html.dark .toggle-btn:hover {
+    background-color: #2a3a31;
+}
+
+html.dark .alphabet-btn.active,
+html.dark .category-btn.active,
+html.dark .toggle-btn.active {
+    background-color: #006b39;
+    border-color: #006b39;
+    color: white;
+}
+
+html.dark .word-card {
+    background-color: #1c261f;
+    border: 1px solid #263129;
+}
+
+html.dark .word-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .word-header {
+    border-bottom-color: #2b3830;
+}
+
+html.dark .word {
+    color: #e2e8e4;
+}
+
+html.dark .pronunciation {
+    color: #8fa39a;
+}
+
+html.dark .section-title {
+    color: #55b07b;
+}
+
+html.dark .sense-item {
+    border-bottom-color: #263129;
+}
+
+html.dark .sense-pos {
+    background-color: #1d3529;
+    color: #55b07b;
+}
+
+html.dark .sense-explanation {
+    color: #cdd8d2;
+}
+
+html.dark .example-item {
+    background-color: #141c17;
+    border-left-color: #006b39;
+}
+
+html.dark .example-original {
+    color: #cdd8d2;
+}
+
+html.dark .example-translation {
+    color: #8b9c92;
+    border-top-color: #2e3c34;
+}
+
+html.dark .grammar-section,
+html.dark .cultural-section {
+    border-top-color: #263129;
+}
+
+html.dark .grammar-content {
+    background-color: #222518;
+    border-color: #4c4a26;
+    color: #b3b0a0;
+}
+
+html.dark .cultural-content {
+    background-color: #12222c;
+    border-color: #1e3f52;
+    color: #b3cbd9;
+}
+
+html.dark .no-results {
+    color: #7d8d82;
+}
+
+html.dark footer {
+    background-color: #121a15;
+    color: #8b9c92;
+    border-top-color: #263129;
+}
+
+html.dark footer a {
+    color: #55b07b;
+}
+
+/* 暗色模式滚动条 */
+html.dark ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+    background: #141c17;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    background: #33483a;
+    border-radius: 5px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #426049;
+}
+
+html.dark body,
+html.dark .sidebar,
+html.dark .main-content {
+    scrollbar-width: thin;
+    scrollbar-color: #33483a #141c17;
 }
