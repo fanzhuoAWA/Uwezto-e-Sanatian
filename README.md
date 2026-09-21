@@ -79,7 +79,7 @@ const alphabetOrder = [
 
 ### 本地预览，然后发布到 Github
 
-终端输入 `python -m http.server` ，然后浏览器进入 `http://localhost:8000/dictionary.html` 查看效果，确认可以了，没有问题了，进行发布环节。
+终端输入 `python -m http.server` ，然后浏览器进入 `http://localhost:8000/` 查看效果，确认可以了，没有问题了，进行发布环节。
 
 首先，你需要让 Git 知道你是谁，终端输入 `git config --global user.name "你的 Github 用户名"` 和 `git config --global user.email "你的 Github 使用的邮箱"` 。
 

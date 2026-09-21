@@ -44,6 +44,11 @@
                     <input type="checkbox" id="caseSensitive">
                     <label for="caseSensitive">区分大小写</label>
                 </div>
+
+                <div class="option-group">
+                    <input type="checkbox" id="experimentalWords">
+                    <label for="experimentalWords">实验性新词</label>
+                </div>
             </div>
 
             <div class="results-info">
@@ -92,6 +97,9 @@
 
     <script>
         let dictionaryData = [];
+        let baseDictionaryData = [];
+        let experimentalData = [];
+        let experimentalLoaded = false;
 
         async function loadDictionary() {
             const statusEl = document.getElementById('status');
@@ -101,7 +109,8 @@
                 const response = await fetch('dictionary.txt');
                 if (!response.ok) throw new Error(`无法加载文件: ${response.status}`);
                 const text = await response.text();
-                dictionaryData = parseDictionaryText(text);
+                baseDictionaryData = parseDictionaryText(text);
+                dictionaryData = baseDictionaryData;
 
                 statusEl.textContent = `已加载 ${dictionaryData.length} 个词汇`;
                 initializeUI();
@@ -118,6 +127,43 @@
                     </div>
                 `;
             }
+        }
+
+        async function loadExperimentalWords() {
+            if (experimentalLoaded) return;
+
+            const response = await fetch('new.txt');
+            if (!response.ok) throw new Error(`无法加载文件: ${response.status}`);
+            const text = await response.text();
+            experimentalData = parseDictionaryText(text);
+            experimentalLoaded = true;
+        }
+
+        async function toggleExperimentalWords() {
+            const checkbox = document.getElementById('experimentalWords');
+            const statusEl = document.getElementById('status');
+
+            if (checkbox.checked) {
+                try {
+                    statusEl.textContent = '正在加载实验性新词...';
+                    await loadExperimentalWords();
+                    dictionaryData = baseDictionaryData.concat(experimentalData);
+                    statusEl.style.color = '';
+                    statusEl.textContent = `已加载 ${baseDictionaryData.length} + ${experimentalData.length} 个词汇（含实验性新词）`;
+                } catch (error) {
+                    console.error('加载实验性新词失败:', error);
+                    statusEl.textContent = `加载实验性新词失败: ${error.message}`;
+                    statusEl.style.color = '#e74c3c';
+                    checkbox.checked = false;
+                    dictionaryData = baseDictionaryData;
+                }
+            } else {
+                dictionaryData = baseDictionaryData;
+                statusEl.style.color = '';
+                statusEl.textContent = `已加载 ${dictionaryData.length} 个词汇`;
+            }
+
+            filterWords();
         }
 
         function extractPhoneticSymbols(text) {
@@ -353,6 +399,7 @@
 
             document.getElementById('searchType').addEventListener('change', filterWords);
             document.getElementById('caseSensitive').addEventListener('change', filterWords);
+            document.getElementById('experimentalWords').addEventListener('change', toggleExperimentalWords);
 
             document.getElementById('toggleAlphabetBtn').addEventListener('click', toggleAlphabetButtons);
 
