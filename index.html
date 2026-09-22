@@ -20,6 +20,7 @@
     <div class="container">
         <header>
             <h1>Uweztoße Sanatian</h1>
+            <a href="articles.html" class="nav-btn" title="查看文章翻译">文章</a>
             <button id="themeToggle" class="theme-toggle" title="切换亮暗模式">暗</button>
         </header>
 
@@ -46,8 +47,8 @@
                 </div>
 
                 <div class="option-group">
-                    <input type="checkbox" id="experimentalWords">
-                    <label for="experimentalWords">实验性新词</label>
+                    <input type="checkbox" id="experimentalWords" checked>
+                    <label for="experimentalWords">拓展词</label>
                 </div>
             </div>
 
@@ -115,6 +116,11 @@
                 statusEl.textContent = `已加载 ${dictionaryData.length} 个词汇`;
                 initializeUI();
 
+                // 拓展词默认开启：启动时加载并合并拓展词
+                if (document.getElementById('experimentalWords').checked) {
+                    toggleExperimentalWords();
+                }
+
             } catch (error) {
                 console.error('加载失败:', error);
                 statusEl.textContent = `加载失败: ${error.message}`;
@@ -136,6 +142,7 @@
             if (!response.ok) throw new Error(`无法加载文件: ${response.status}`);
             const text = await response.text();
             experimentalData = parseDictionaryText(text);
+            experimentalData.forEach(e => e.isExperimental = true);
             experimentalLoaded = true;
         }
 
@@ -145,14 +152,14 @@
 
             if (checkbox.checked) {
                 try {
-                    statusEl.textContent = '正在加载实验性新词...';
+                    statusEl.textContent = '正在加载拓展词列表...';
                     await loadExperimentalWords();
                     dictionaryData = baseDictionaryData.concat(experimentalData);
                     statusEl.style.color = '';
-                    statusEl.textContent = `已加载 ${baseDictionaryData.length} + ${experimentalData.length} 个词汇（含实验性新词）`;
+                    statusEl.textContent = `已加载 ${baseDictionaryData.length} + ${experimentalData.length} 个词汇（含拓展词）`;
                 } catch (error) {
-                    console.error('加载实验性新词失败:', error);
-                    statusEl.textContent = `加载实验性新词失败: ${error.message}`;
+                    console.error('加载拓展词失败:', error);
+                    statusEl.textContent = `加载拓展词失败: ${error.message}`;
                     statusEl.style.color = '#e74c3c';
                     checkbox.checked = false;
                     dictionaryData = baseDictionaryData;
@@ -460,6 +467,12 @@
                         `<span class="pronunciation">${item.phonetic_symbols}</span>` : ''}
             </div>
         `;
+                if (item.isExperimental) {
+                    const flag = document.createElement('span');
+                    flag.className = 'ext-badge';
+                    flag.textContent = '拓展词';
+                    wordHeader.appendChild(flag);
+                }
 
                 // 2. 多词性释义区域
                 const sensesSection = document.createElement('div');

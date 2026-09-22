@@ -8,6 +8,10 @@
         "PingFang SC Light", "Microsoft YaHei UI Light", "Microsoft YaHei", sans-serif;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
@@ -54,7 +58,8 @@ h1 {
     margin-bottom: 15px;
 }
 
-#searchInput {
+#searchInput,
+#articleSearchInput {
     flex: 1;
     padding: 15px 20px;
     font-size: 16px;
@@ -64,12 +69,14 @@ h1 {
     transition: all 0.3s;
 }
 
-#searchInput:focus {
+#searchInput:focus,
+#articleSearchInput:focus {
     border-color: #4a6fa5;
     box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
 }
 
-#searchBtn {
+#searchBtn,
+#articleSearchBtn {
     background-color: #4a6fa5;
     color: white;
     border: none;
@@ -80,7 +87,8 @@ h1 {
     transition: background-color 0.3s;
 }
 
-#searchBtn:hover {
+#searchBtn:hover,
+#articleSearchBtn:hover {
     background-color: #3a5a80;
 }
 
@@ -193,6 +201,7 @@ h1 {
 }
 
 .word-card {
+    position: relative;
     background-color: white;
     border: 1px solid #eaeaea;
     border-radius: 10px;
@@ -214,6 +223,18 @@ h1 {
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: 2px solid #eef2f7;
+}
+
+.ext-badge {
+    flex-shrink: 0;
+    background-color: #f2f3f5;
+    border: 1px solid #d5d8dc;
+    color: #8a8f98;
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 2px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
 }
 
 .word-and-pos {
@@ -523,6 +544,173 @@ footer a:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
+/* ===== 页面导航按钮（词典 <-> 文章） ===== */
+.nav-btn {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    line-height: 1.2;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== 文章翻译页面 ===== */
+.article-toolbar {
+    padding: 15px 25px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.article-status {
+    margin-top: 8px;
+    color: #4a6fa5;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.article-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.article-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.article-btn:hover {
+    background-color: #e9ecef;
+}
+
+.article-btn.active {
+    background-color: #4a6fa5;
+    color: white;
+    border-color: #4a6fa5;
+}
+
+.article-title {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.article-meta-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e0e6ed;
+}
+
+.article-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.article-paragraph {
+    display: flex;
+    gap: 20px;
+    background-color: #f8fafc;
+    border-left: 3px solid #4a6fa5;
+    border-radius: 8px;
+    padding: 15px 18px;
+}
+
+.paragraph-lang {
+    flex: 1;
+    line-height: 1.7;
+}
+
+.paragraph-lang.zh {
+    color: #2c3e50;
+}
+
+.paragraph-lang.uw {
+    color: #5d6d7e;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .article-paragraph {
+        flex-direction: column;
+    }
+}
+
+/* 搜索结果卡片 */
+.search-result-card {
+    background-color: white;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.search-result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.search-result-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.search-result-meta {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.search-result-para {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+.search-result-para.uw {
+    color: #5d6d7e;
+    font-style: italic;
+}
+
+.search-result-para + .search-result-para {
+    margin-top: 8px;
+}
+
+mark {
+    background-color: #ffe58a;
+    color: #2c3e50;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+
 /* ===== 暗色模式 ===== */
 html.dark body {
     background: linear-gradient(135deg, #1b1f2a 0%, #0e1117 100%);
@@ -539,17 +727,20 @@ html.dark .search-container {
     border-bottom: 1px solid #2a3038;
 }
 
-html.dark #searchInput {
+html.dark #searchInput,
+html.dark #articleSearchInput {
     background-color: #242a32;
     border: 2px solid #3a4350;
     color: #e6e8ee;
 }
 
-html.dark #searchInput::placeholder {
+html.dark #searchInput::placeholder,
+html.dark #articleSearchInput::placeholder {
     color: #7d8594;
 }
 
-html.dark #searchInput:focus {
+html.dark #searchInput:focus,
+html.dark #articleSearchInput:focus {
     border-color: #6c8fc9;
     box-shadow: 0 0 0 3px rgba(108, 143, 201, 0.25);
 }
@@ -607,6 +798,12 @@ html.dark .word-card:hover {
 
 html.dark .word-header {
     border-bottom-color: #2c333d;
+}
+
+html.dark .ext-badge {
+    background-color: #2a3038;
+    border-color: #3a414c;
+    color: #93a0b3;
 }
 
 html.dark .word {
@@ -677,6 +874,83 @@ html.dark footer {
 
 html.dark footer a {
     color: #7ea8d8;
+}
+
+html.dark .article-toolbar {
+    background-color: #1a1f26;
+    border-bottom-color: #2a3038;
+}
+
+html.dark .article-status {
+    color: #7ea8d8;
+}
+
+html.dark .article-btn {
+    background-color: #242a32;
+    border-color: #3a4350;
+    color: #d5d9e2;
+}
+
+html.dark .article-btn:hover {
+    background-color: #313947;
+}
+
+html.dark .article-btn.active {
+    background-color: #4a6fa5;
+    border-color: #4a6fa5;
+    color: white;
+}
+
+html.dark .article-title {
+    color: #e6e8ee;
+}
+
+html.dark .article-source,
+html.dark .article-meta-row {
+    color: #93a0b3;
+    border-bottom-color: #333b46;
+}
+
+html.dark .article-paragraph {
+    background-color: #181d24;
+}
+
+html.dark .paragraph-lang.zh {
+    color: #d5d9e2;
+}
+
+html.dark .paragraph-lang.uw {
+    color: #8b96a5;
+}
+
+html.dark .search-result-card {
+    background-color: #1f242c;
+    border-color: #2a3038;
+}
+
+html.dark .search-result-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .search-result-title {
+    color: #e6e8ee;
+}
+
+html.dark .search-result-meta {
+    color: #93a0b3;
+}
+
+html.dark .search-result-para {
+    color: #d5d9e2;
+}
+
+html.dark .search-result-para.uw {
+    color: #8b96a5;
+}
+
+html.dark mark {
+    background-color: #4f4a28;
+    color: #f0e6a0;
 }
 
 /* 暗色模式滚动条 */

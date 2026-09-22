@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乌斯托什语文章翻译</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- 为了更好的兼容性，可以同时添加下面这行 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Uweztoße Sanatian</h1>
+            <a href="index.html" class="nav-btn" title="返回词典">词典</a>
+            <button id="themeToggle" class="theme-toggle" title="切换亮暗模式">暗</button>
+        </header>
+
+        <div class="article-toolbar">
+            <div class="search-box">
+                <input type="text" id="articleSearchInput" placeholder="搜索标题、作者、来源、中文或乌斯托什语内容..." autocomplete="off">
+                <button id="articleSearchBtn">搜索</button>
+            </div>
+            <div class="article-status" id="status">正在加载文章数据...</div>
+        </div>
+
+        <div class="dictionary-content">
+            <div class="sidebar">
+                <h3 style="margin-bottom: 15px; color: #2c3e50;">文章列表</h3>
+                <div class="article-filter" id="articleFilter">
+                    <!-- 文章按钮将通过JavaScript生成 -->
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div id="articleView">
+                    <div class="no-results">请从左侧选择一篇文章</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>词典数据来源：<a href="https://fanzhuo.xyz/" target="_blank">Fanzhuo</a> | 版权所有 © 2025-<span id="currentYear">2025</span> Fanzhuo 保留所有权利</p>
+        </footer>
+    </div>
+
+    <script>
+        let articles = [];
+        let selectedIndex = 0;
+        let searchQuery = '';
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function qnorm(s) {
+            return s ? s.trim().toLowerCase() : '';
+        }
+
+        function articleMatches(article) {
+            if (qnorm(article.title).includes(searchQuery)) return true;
+            if (qnorm(article.author).includes(searchQuery)) return true;
+            if (qnorm(article.source).includes(searchQuery)) return true;
+            return article.paragraphs.some(p =>
+                qnorm(p.chinese).includes(searchQuery) || qnorm(p.uwezto).includes(searchQuery));
+        }
+
+        // 将所有匹配片段高亮为 <mark>
+        function highlight(text) {
+            if (!searchQuery) return escapeHtml(text);
+            const lower = text.toLowerCase();
+            let result = '';
+            let pos = 0;
+            for (;;) {
+                const i = lower.indexOf(searchQuery, pos);
+                if (i === -1) {
+                    result += escapeHtml(text.slice(pos));
+                    break;
+                }
+                result += escapeHtml(text.slice(pos, i)) + '<mark>' + escapeHtml(text.slice(i, i + searchQuery.length)) + '</mark>';
+                pos = i + searchQuery.length;
+            }
+            return result;
+        }
+
+        // 解析 article.txt：title: 开篇，cn: 中文段落，uwe: 乌斯托什语段落，多篇之间空行分隔
+        function parseArticleText(text) {
+            const result = [];
+            let current = null;
+            let lastKey = '';
+            const lines = text.split('\n');
+
+            for (const rawLine of lines) {
+                const line = rawLine.trim();
+                if (!line || line.startsWith('#')) continue;
+
+                const separatorIndex = line.indexOf(':');
+                if (separatorIndex === -1) {
+                    // 续行处理：附加到最近的 cn 或 uwe 段落
+                    if (current && current.paragraphs.length > 0 && (lastKey === 'cn' || lastKey === 'uwe')) {
+                        const lastParagraph = current.paragraphs[current.paragraphs.length - 1];
+                        if (lastKey === 'uwe') {
+                            lastParagraph.uwezto += ' ' + line;
+                        } else {
+                            lastParagraph.chinese += ' ' + line;
+                        }
+                    }
+                    continue;
+                }
+
+                const key = line.substring(0, separatorIndex).trim();
+                const value = line.substring(separatorIndex + 1).trim();
+
+                switch (key) {
+                    case 'title':
+                        if (current) result.push(current);
+                        current = { title: value, author: '', source: '', paragraphs: [] };
+                        break;
+
+                    case 'author':
+                        if (current) current.author = value;
+                        break;
+
+                    case 'source':
+                        if (current) current.source = value;
+                        break;
+
+                    case 'cn':
+                        if (current) {
+                            const lastParagraph = current.paragraphs.length > 0 ? current.paragraphs[current.paragraphs.length - 1] : null;
+                            if (lastParagraph && !lastParagraph.chinese) {
+                                lastParagraph.chinese = value;
+                            } else {
+                                current.paragraphs.push({ chinese: value, uwezto: '' });
+                            }
+                            lastKey = 'cn';
+                        }
+                        break;
+
+                    case 'uwe':
+                        if (current) {
+                            const lastParagraph = current.paragraphs.length > 0 ? current.paragraphs[current.paragraphs.length - 1] : null;
+                            if (lastParagraph && !lastParagraph.uwezto) {
+                                lastParagraph.uwezto = value;
+                            } else {
+                                current.paragraphs.push({ chinese: '', uwezto: value });
+                            }
+                            lastKey = 'uwe';
+                        }
+                        break;
+                }
+            }
+
+            if (current) result.push(current);
+            return result;
+        }
+
+        async function loadArticles() {
+            const statusEl = document.getElementById('status');
+
+            try {
+                const response = await fetch('article.txt');
+                if (!response.ok) throw new Error(`无法加载文件: ${response.status}`);
+                const text = await response.text();
+                articles = parseArticleText(text);
+
+                if (articles.length === 0) {
+                    statusEl.textContent = 'article.txt 中暂无文章';
+                } else {
+                    statusEl.textContent = `已加载 ${articles.length} 篇文章`;
+                }
+                renderArticleList();
+                if (articles.length > 0) showArticle(0);
+
+            } catch (error) {
+                console.error('加载失败:', error);
+                statusEl.textContent = '';
+                document.getElementById('articleView').innerHTML = `
+                    <div class="no-results">
+                        <h3>无法加载文章文件</h3>
+                        <p>错误: ${escapeHtml(error.message)}</p>
+                        <p>请确保 article.txt 文件与当前HTML文件在同一目录下。</p>
+                    </div>
+                `;
+            }
+        }
+
+        function renderArticleList() {
+            const filter = document.getElementById('articleFilter');
+            filter.innerHTML = '';
+
+            if (articles.length === 0) {
+                filter.innerHTML = '<div class="no-results">暂无文章</div>';
+                return;
+            }
+
+            const list = searchQuery ? articles.filter(articleMatches) : articles;
+            if (list.length === 0) {
+                filter.innerHTML = '<div class="no-results">无匹配文章</div>';
+                return;
+            }
+
+            list.forEach(article => {
+                const index = articles.indexOf(article);
+                const btn = document.createElement('button');
+                btn.className = index === selectedIndex ? 'article-btn active' : 'article-btn';
+                btn.dataset.index = index;
+                btn.textContent = article.title;
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.article-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    showArticle(parseInt(this.dataset.index, 10));
+                });
+                filter.appendChild(btn);
+            });
+        }
+
+        // 搜索结果视图：列出匹配文章及命中的段落
+        function showSearchResults(matched) {
+            const view = document.getElementById('articleView');
+            let html = '';
+
+            matched.forEach(article => {
+                const index = articles.indexOf(article);
+                const paras = article.paragraphs.filter(p =>
+                    qnorm(p.chinese).includes(searchQuery) || qnorm(p.uwezto).includes(searchQuery));
+
+                html += `
+                    <div class="search-result-card" data-index="${index}">
+                        <div class="search-result-title">${escapeHtml(article.title)}</div>
+                        <div class="search-result-meta">
+                            ${article.author ? `作者：${escapeHtml(article.author)}` : ''}${article.author && article.source ? ' · ' : ''}${article.source ? `来源：${escapeHtml(article.source)}` : ''}
+                        </div>
+                `;
+
+                if (paras.length === 0) {
+                    html += '<div class="search-result-para">（匹配于标题 / 作者 / 来源）</div>';
+                } else {
+                    paras.forEach(p => {
+                        if (p.chinese) html += `<div class="search-result-para cn">${highlight(p.chinese)}</div>`;
+                        if (p.uwezto) html += `<div class="search-result-para uw">${highlight(p.uwezto)}</div>`;
+                    });
+                }
+                html += '</div>';
+            });
+
+            view.innerHTML = html;
+            view.querySelectorAll('.search-result-card').forEach(card => {
+                card.addEventListener('click', function () {
+                    showArticle(parseInt(this.dataset.index, 10));
+                });
+            });
+        }
+
+        // 主视图：有搜索词时显示结果列表，否则显示选中的文章
+        function renderMain() {
+            const view = document.getElementById('articleView');
+            const statusEl = document.getElementById('status');
+
+            if (!searchQuery) {
+                showArticle(selectedIndex);
+                return;
+            }
+
+            const matched = articles.filter(articleMatches);
+            if (matched.length === 0) {
+                statusEl.textContent = '未找到匹配的文章';
+                view.innerHTML = `<div class="no-results">未找到包含「${escapeHtml(searchQuery)}」的文章</div>`;
+            } else {
+                statusEl.textContent = `找到 ${matched.length} 篇匹配文章`;
+                showSearchResults(matched);
+            }
+        }
+
+        function doSearch() {
+            const statusEl = document.getElementById('status');
+            searchQuery = document.getElementById('articleSearchInput').value.trim().toLowerCase();
+
+            if (!searchQuery) {
+                statusEl.textContent = `已加载 ${articles.length} 篇文章`;
+            }
+            renderArticleList();
+            renderMain();
+        }
+
+        function showArticle(index) {
+            const article = articles[index];
+            if (!article) {
+                document.getElementById('articleView').innerHTML = '<div class="no-results">未找到文章</div>';
+                return;
+            }
+
+            selectedIndex = index;
+            renderArticleList();
+
+            const view = document.getElementById('articleView');
+
+            let html = `<h2 class="article-title">${escapeHtml(article.title)}</h2>`;
+
+            let metaHtml = '';
+            if (article.author) metaHtml += `<span class="article-meta author">作者：${escapeHtml(article.author)}</span>`;
+            if (article.source) metaHtml += `<span class="article-meta source">来源：${escapeHtml(article.source)}</span>`;
+            if (metaHtml) html += `<div class="article-meta-row">${metaHtml}</div>`;
+
+            if (article.paragraphs.length === 0) {
+                html += '<div class="no-results">该文章暂无段落</div>';
+            } else {
+                html += '<div class="article-body">';
+                article.paragraphs.forEach(p => {
+                    html += `
+                        <div class="article-paragraph">
+                            <div class="paragraph-lang zh">${escapeHtml(p.chinese)}</div>
+                            <div class="paragraph-lang uw">${escapeHtml(p.uwezto)}</div>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+
+            view.innerHTML = html;
+        }
+
+        document.addEventListener('DOMContentLoaded', loadArticles);
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        document.getElementById('articleSearchBtn').addEventListener('click', doSearch);
+        document.getElementById('articleSearchInput').addEventListener('input', doSearch);
+        document.getElementById('articleSearchInput').addEventListener('keyup', function (e) {
+            if (e.key === 'Enter') doSearch();
+        });
+
+        const themeToggle = document.getElementById('themeToggle');
+        function applyTheme(theme) {
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            themeToggle.textContent = theme === 'dark' ? '亮' : '暗';
+        }
+        applyTheme(localStorage.getItem('theme') || 'light');
+        themeToggle.addEventListener('click', () => {
+            const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+        });
+    </script>
+</body>
+
+</html>

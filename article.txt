@@ -1,0 +1,101 @@
+# 文章翻译数据文件
+# 每篇文章以 title: 开头；多篇文章之间用空行分隔；以 # 开头的行是注释，会被忽略
+# 支持字段：
+#   title     标题（必填）
+#   author    作者
+#   source    来源（哪篇文章/哪本书）
+#   cn        中文段落
+#   uwe       乌斯托什语段落（与最近的 cn 组成一个对照段落）
+
+title:匆匆
+author:朱自清
+source:《踪迹》（原载1922年3月28日）
+
+cn:燕子去了，有再来的时候；杨柳枯了，有再青的时候；桃花谢了，有再开的时候。但是，聪明的，你告诉我，我们的日子为什么一去不复返呢？——是有人偷了他们罢：那是谁？又藏在何处呢？是他们自己逃走了罢：现在又到了哪里呢？
+uwe:Lastovkap goz, oöt hovö däte aka kmno; wivöp wehez, oöt hovö däte aka wédie; perzö'voöforp vëdz, oöt hovö däte aka voöfor. Cut, ao lo'lovekely, sol of io: zokö id'daiep, goz, nein oulue aka kmno? — Ö cai kradez lisi he: eleue poëtz dat? Oöt skaöz lisi of rori twhas to? — Lisi étd utïsez he: oöt nek, goz lisi of rori twhas to?
+
+cn:我不知道他们给了我多少日子；但我的手确乎是渐渐空虚了。在默默里算着，八千多日子已经从我手中溜去；像针尖上一滴水滴在大海里，我的日子滴在时间的流里，没有声音，也没有影子。我不禁头涔涔而泪潸潸了。
+uwe:Io rien bafow sylke daiep lisi alyavez of io; cut io'ruka, uver, kuaw möl oöt möl lo'huve. Opntö of soköly: wödö'xalö oöt piz daiep nekz teñez of io'ruka'rowex; olo kul'kapne of igölka'kroe, tipput of oñergkul'rowex, io'daiep tipputz of aeanese'töle'rowex, rien swöne, oöt rien sönje. Io nein oulue soköly: pote tsewöz of heca, onüzep tsewöz.
+
+cn:去的尽管去了，来的尽管来着；去来的中间，又怎样地匆匆呢？早上我起来的时候，小屋里射进两三方斜斜的太阳。太阳他有脚啊，轻轻悄悄地挪移了；我也茫茫然跟着旋转。于是——洗手的时候，日子从水盆里过去；吃饭的时候，日子从饭碗里过去；默默时，便从凝然的双眼前过去。我觉察他去得匆匆了，伸出手遮挽时，他又从遮挽着的手边过去，天黑时，我躺在床上，他便伶伶俐俐地从我身上跨过，从我脚边飞去了。等我睁开眼和太阳再见，这算又溜走了一日。我掩着面叹息。但是新来的日子的影儿又开始在叹息里闪过了。
+uwe:Goz wön goz; kmno wön kmno; cut of rowex of go oöt kmno, sylke toröply to? Vakaean, tiłe io wstanez, lowv-öta troske of aean'luön lo'xlina cvïrez of ö röme'rowex. Aean, hovö nögap li he—merettez löftly oöt soköly; io to, lo'rumtöly, vertöz wrop li. Kuaw—tiłe myte of ruka, daie teñe of wadnö'rowex; tiłe aotöf, daie teñe of miskö'rowex; tiłe soköly, teñe of lowv oko lo'stiprely'front. Io soyz lit lo'toröp; tiłe io pïpez ruka wrop dohre, li aka teñe of ruka lo'dohre'rilet; tiłe tömlunz, io spatez of lusko, li, lo'ketly, kruspez of io'hont, oöt hontpez of io'nögap'rilet. Tiłe io woknez oko oöt aka ponertz aean, phow twik: aka ö daie teñez. Io phesnez löse oöt özdörez. Cut aka'kmno daie'sönje aka twirez of rowex of özdöre.
+
+cn:在逃去如飞的日子里，在千门万户的世界里的我能做些什么呢？只有徘徊罢了，只有匆匆罢了；在八千多日的匆匆里，除徘徊外，又剩些什么呢？过去的日子如轻烟，被微风吹散了，如薄雾，被初阳蒸融了；我留着些什么痕迹呢？我何曾留着像游丝样的痕迹呢？我赤裸裸来到这世界，转眼间也将赤裸裸地回去罢？但不能平的，为什么偏要白白走这一遭啊？
+uwe:Of rowex of daiep lo'utïse olo hontpe, rori oulue io may of oope lo'aoö'vörtep? Sop browö; sop toröp; of toröp of wödö'xalö oöt piz daiep, sop browö neinphikz; rori piz he? Minöre'daiep olo soñmö lo'löftly, bï löftly'huvf razdanes lisi; olo dömka, bï vakaean'aean paröz lisi. Sylke slyede io neinphikz he? Io nuner lefzez slyede olo aeanese'jyze he? Io kmnoz of phow'oope lo'gölly, oöt of ö mytke, wön aka goz lo'gölly he. Cut io rien oulue plyzö: zokö id wön šoröly goz ö möl he?
+
+cn:你聪明的，告诉我，我们的日子为什么一去不复返呢？
+uwe:Ao lo'lovekely, sol of io: zokö id'daiep, goz, nein oulue aka kmno he?
+
+cn:一九二二年三月二十八日
+uwe:vesnaele, lowvly oöt wödö daiy, 1922.
+
+title:我三十万大军胜利南渡长江
+author:毛泽东
+source:《毛泽东选集》第四卷
+
+cn:新华社长江前线二十二日二时电 英勇的人民解放军二十一日已有大约三十万人渡过长江。渡江战斗于二十日午夜开始，地点在芜湖、安庆之间。
+uwe:Sinhuon acufß of Loñwaskul'frontseo, lowvly-lowv daiy lowv xuð diew: Perkua'Libertar'kwande lo'sély, of lowvly-ö daiy, nekz hovö of kuowe lowvly-dix ñunö rae fröcez of Loñwaskul. Loñwaskul'fröce'boj mayz of rowex'nokt of lowvly daiy; twhas poëtz rowex of Vuhu oöt Ankyn.
+
+cn:国民党反动派经营了三个半月的长江防线，遇着人民解放军好似摧枯拉朽，军无斗志，纷纷溃退。
+uwe:Onthit'perkua'partö reaktionar budez Loñwaskul'fendöseo of öta lve lowv lfe ö orle; floöz perkua'Libertar'kwande, olo riłt oöt geewoöd lo'neinhve bï ofuöz; kwande, rien hovö düs, to utïsez.
+
+cn:长江风平浪静，我军万船齐放，直取对岸，不到二十四小时，三十万人民解放军即已突破敌阵，占领南岸广大地区，现正向繁昌、铜陵、青阳、荻港、鲁港诸城进击中。
+uwe:Loñwaskul, huvf oöt xwèle rien wöge; id'kwande'ñunö ðep poi fweddez, dreve zanedz of datway'bröge. Mene deat lowvly lve ferta xuð, lowvly-dix ñunö perkua'Libertar'kwande nekz kruspez ablitbot'lade, zanedz region lo'oñerg of vivex'bröge; nek perkua'Libertar'kwande wrop Fanchaan, Tonglin, Qingyan, Digang oöt Lugang grödep prosove.
+
+cn:人民解放军正以自己的英雄式的战斗，坚决地执行毛主席朱总司令的命令。
+uwe:Perkua'Libertar'kwande, toshöð of étd'boj lo'sély, nek uver provede solent of Mao'vorsitz oöt Ju'golvö'wede'cai.
+
+title:人民解放军百万大军横渡长江
+author:毛泽东
+source:《毛泽东选集》第四卷
+
+cn:新华社长江前线二十二日二十二时电 人民解放军百万大军，从一千余华里的战线上，冲破敌阵，横渡长江。
+uwe:Sinhuon acufß of Loñwaskul'frontseo, lowvly-lowv daiy lowvly-lowv xuð diew: Perkua'Libertar'kwande slowenp'kwande, of xalö oöt piz lone'frontseo, kruspez ablitbot'lade, fröcez of Loñwaskul.
+
+cn:西起九江（不含），东至江阴，均是人民解放军的渡江区域。
+uwe:Phto mayz of Jiujiang (rien lofö), vak pödöz of Jiängjin; poi poëtz fröce'region of perkua'Libertar'kwande.
+
+cn:二十日夜起，长江北岸人民解放军中路军首先突破安庆、芜湖线，渡至繁昌、铜陵、青阳、荻港、鲁港地区，二十四小时内即已渡过三十万人。
+uwe:Of rowex'nokt of lowvly daiy, rowex'kwande of perkua'Libertar'kwande of Loñwaskul'pivex'bröge, wenö kruspez Ankyn-Vuhu'seo, fröcez wrop Fanchaan, Tonglin, Qingyan, Digang oöt Lugang'region; of rowex of lowvly lve ferta xuð, nekz fröcez lowvly-dix ñunö rae.
+
+cn:二十一日下午五时起，我西路军开始渡江，地点在九江、安庆段。
+uwe:Of phtoaean'antferta xuð of lowvly-ö daiy, id'phto'kwande mayz of fröce of Loñwaskul; twhas poëtz of Jiujiang-Ankyn'línde.
+
+cn:至发电时止，该路三十五万人民解放军已渡过三分之二，余部二十三日可渡完。
+uwe:Wrop phow'acufß'xuð, lowvly-dix antferta ñunö perkua'Libertar'kwande of phow'phto'kwande nekz fröcez öta lfe lowv; lo'klöre'p, of lowvly-öta daiy, wön oulue poi fröcez.
+
+cn:这一路现已占领贵池、殷家汇、东流、至德、彭泽之线的广大南岸阵地，正向南扩展中。
+uwe:Phow'kwande nekz zaned lo'oñerg'vivex'bröge'ladep of Gwechi, Yinjiawei, Dongliu, Zhide oöt Pengze'seo; nek zöpnez wrop vivex.
+
+cn:和中路军所遇敌情一样，我西路军当面之敌亦纷纷溃退，毫无斗志，我军所遇之抵抗，甚为微弱。
+uwe:ðoñejph of rowex'kwande'floö, ablitbotp of id'phto'kwande'frontseo to utïsez, uver rien hovö düs; zivrö of id'kwande'floö poëtz nölö lo'kumö.
+
+cn:此种情况，一方面由于人民解放军英勇善战，锐不可当；另一方面，这和国民党反动派拒绝签订和平协定，有很大关系。
+uwe:Söïde'ö: perkua'Libertar'kwande poëtz sély oöt silno of boj, nein oulue zwöde; söïde'lowv: phow'nöste hovö oñerg attit of tweñö of Onthit'perkua'partö reaktionar wrop signö of mirö'konvend.
+
+cn:国民党的广大官兵一致希望和平，不想再打了，听见南京拒绝和平，都很泄气。
+uwe:Lo'oñerg ppietp oöt olitsirp of Onthit'perkua'partö poi vila of mirö; rien vila of aka boj; tiłe li osnez Nankin'tweñö of mirö, li to xvötöz.
+
+cn:战犯汤恩伯二十一日到芜湖督战，不起丝毫作用。
+uwe:Boj'povrö Tan'Enbo, of lowvly-ö daiy, pödöz of Vuhu survö boj; cut rien hovö ö troske deje.
+
+cn:汤恩伯认为南京、江阴段防线是很巩固的，弱点只存在于南京、九江一线。
+uwe:Tan'Enbo mwinez: Nankin-Jiängjin'línde'fendöseo poëtz nölö lo'stalbe; slabne'twhasp sop poëtz of Nankin-Jiujiang'seo.
+
+cn:不料正是汤恩伯到芜湖的那一天，东面防线又被我军突破了。
+uwe:Neioö, dat daiy of Tan'Enbo'pödö of Vuhu, vak'fendöseo aka nekz bï id'kwande kruspez.
+
+cn:我东路三十五万大军与西路同日同时发起渡江作战。
+uwe:Id'vak'kwande lowvly-dix antferta ñunö'kwande oöt phto'kwande, of dat daiy oöt dat xuð, mayz of fröce'boj.
+
+cn:所有预定计划，都已实现。
+uwe:Poi vorno'projektp, nekz evetz.
+
+cn:至发电时止，我东路各军已大部渡过南岸，余部二十三日可以渡完。
+uwe:Wrop phow'acufß'xuð, oñerg pötte of id'vak'kwande nekz fröcez of vivex'bröge; lo'klöre'p, of lowvly-öta daiy, wön oulue poi fröcez.
+
+cn:此处敌军抵抗较为顽强，然在二十一日下午至二十二日下午的整天激战中，我已歼灭及击溃一切抵抗之敌，占领扬中、镇江、江阴诸县的广大地区，并控制江阴要塞，封锁长江。
+uwe:Phow'twhas'ablitbot'zivrö poëtz nölö silno; cut, of boj'poidö of phtoaean'lowvly-ö daiy wrop phtoaean'lowvly-lowv daiy, io nekz zmyrö oöt dötre poi zivrö'ablitbotp; zaned lo'oñerg region of Yangzhong, Zhenjian oöt Jiängjin'prefecturep, oöt wlödö of Jiängjin'twerpe, oöt blokö of Loñwaskul.
+
+cn:我军前锋，业已切断镇江、无锡段铁路线。
+uwe:Id'frontö'kwande nekz broken of Zhenjian-Wuxi'línde'chank'seo.

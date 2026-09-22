@@ -674,14 +674,26 @@ grammar_note:专名音译，同 Peakin（北京）
 word:dewöt
 explanation:九（个、条、张……）@@@九
 part_of_speech:det.@@@num.
-phonetic_symbols:/ˈdɛ.wøt/
+phonetic_symbols:/ˈdɛ.wʌt/
 grammar_note:数词，用于计数
 
 word:dewötle
 explanation:九月
 part_of_speech:n.
-phonetic_symbols:/ˈdɛ.wøt.lə/
+phonetic_symbols:/ˈdɛ.wʌt.lə/
 grammar_note:由 dewöt（九）加词尾 -le（月，同 akaylmole 一月）构成
+
+word:vesnae
+explanation:春；春天
+part_of_speech:n.
+phonetic_symbols:/ˈvɛs.naɪ/
+grammar_note:与 Vesnaeanes（春季）同源，为春之根词，意名月份多以根词加 -le（月）构成
+
+word:vesnaele
+explanation:三月
+part_of_speech:n.
+phonetic_symbols:/ˈvɛs.naɪ.lə/
+grammar_note:直译春月；由 vesnae（春）加词尾 -le（月）构成，同 akaylmole（一月）、voöforle（二月）
 
 word:osen
 explanation:秋；秋季
@@ -691,7 +703,7 @@ phonetic_symbols:/ˈɔ.sɛn/
 word:löwö
 explanation:潦水；雨后积水
 part_of_speech:n.
-phonetic_symbols:/ˈlø.wø/
+phonetic_symbols:/ˈlʌ.wʌ/
 
 word:evet
 explanation:尽；穷尽；完结
@@ -707,17 +719,17 @@ phonetic_symbols:/dɛɲt/
 word:kölda
 explanation:寒的；寒冷的
 part_of_speech:adj.
-phonetic_symbols:/ˈkøl.da/
+phonetic_symbols:/ˈkʌl.da/
 
 word:soñmö
 explanation:烟；烟霭
 part_of_speech:n.
-phonetic_symbols:/ˈsɔɲ.mø/
+phonetic_symbols:/ˈsɔɲ.mʌ/
 
 word:lölde
 explanation:凝；凝聚
 part_of_speech:vi.
-phonetic_symbols:/ˈløl.dɛ/
+phonetic_symbols:/ˈlʌl.dɛ/
 grammar_note:过去式 löldez
 
 word:pître
@@ -739,7 +751,7 @@ grammar_note:复数 tweroidp
 word:poyö
 explanation:游访；寻访
 part_of_speech:vt.
-phonetic_symbols:/ˈpɔ.jø/
+phonetic_symbols:/ˈpɔ.jʌ/
 grammar_note:过去式 poyöz
 
 word:sioñe
@@ -771,7 +783,7 @@ phonetic_symbols:/ˈɡɛz.də/
 word:zwöda
 explanation:天人；仙人
 part_of_speech:n.
-phonetic_symbols:/ˈzwø.da/
+phonetic_symbols:/ˈzwʌ.da/
 
 word:stare
 explanation:旧的；古老的
@@ -816,7 +828,7 @@ phonetic_symbols:/ˈɡɛl.də/
 word:tsewö
 explanation:流溢；流淌
 part_of_speech:vi.
-phonetic_symbols:/ˈtsɛ.wø/
+phonetic_symbols:/ˈtsɛ.wʌ/
 grammar_note:过去式 tsewöz
 
 word:tsyn
@@ -827,7 +839,7 @@ phonetic_symbols:/tsɪn/
 word:zörav
 explanation:鹤
 part_of_speech:n.
-phonetic_symbols:/ˈzɔ.rav/
+phonetic_symbols:/ˈzʌ.rav/
 
 word:kacza
 explanation:凫；野鸭
@@ -837,7 +849,7 @@ phonetic_symbols:/ˈkat.sa/
 word:könar
 explanation:萦回；回环
 part_of_speech:n.
-phonetic_symbols:/ˈkø.nar/
+phonetic_symbols:/ˈkʌ.nar/
 grammar_note:复数 könarp
 
 word:osmane
@@ -886,7 +898,7 @@ grammar_note:过去式 vïtez
 word:zörya
 explanation:星；星辰
 part_of_speech:n.
-phonetic_symbols:/ˈzø.rja/
+phonetic_symbols:/ˈzʌ.rja/
 grammar_note:复数 zöryap
 
 word:prosne
@@ -959,7 +971,7 @@ grammar_note:用法 tzwerta of A olo B，把 A 当作 B
 word:minöre
 explanation:过去；往昔
 part_of_speech:n.
-phonetic_symbols:/miˈnø.rə/
+phonetic_symbols:/miˈnʌ.rə/
 
 word:lusko
 explanation:床；卧榻
@@ -969,12 +981,12 @@ phonetic_symbols:/ˈlus.kɔ/
 word:tömnö
 explanation:黑暗的；阴暗的
 part_of_speech:adj.
-phonetic_symbols:/ˈtøm.nø/
+phonetic_symbols:/ˈtʌm.nʌ/
 
 word:churö
 explanation:陌生的；疏离的；异样的
 part_of_speech:adj.
-phonetic_symbols:/ˈtʃu.rø/
+phonetic_symbols:/ˈtʃu.rʌ/
 
 word:Ramrze
 explanation:兰姆齐（姓氏）
@@ -1002,7 +1014,7 @@ grammar_note:由 vakaean（早上）加 -ly 构成
 word:zowöte
 explanation:狂喜；狂热的喜悦
 part_of_speech:n.
-phonetic_symbols:/ˈzɔ.wø.tə/
+phonetic_symbols:/ˈzɔ.wʌ.tə/
 example_sentence:1."Tak, uver, idt kyfaces lo'shinobit," sol Ramrze'pane, "cut ao kuwei wstane lo'vakaeanly," li aka sol. Of li'lein, phow'solentp toshöðz zowöte of li'lein; ðoñejph phow'xfin nekz lo'vitno; ðoñejph phow'pöre'go nekz goz; ðoñejph lein'aeanese'zödo nekz lo'klöre of li'oko'front: olane, weslo, oñergkulp, ðe lo'sas, xwèlep tweoz of ðe'dübe, oñergkul'huvf, rybe, ostrohö, mekre, triske, ömare, vedro, mötuö, töfe, aean'luön, palöbe, swönep of bröge'hont, chajke, zöryap, tõch, vuade, töfe, aean'luön, palöbe, witre, söwe, oñergkul'xwèlep, rybe, chajke, zöryap, tõch, vuade, töfe, aean'luön……###"是的，当然，如果天气好，"兰姆齐夫人说，"不过你得起早，"她补充说。对她儿子来说，这些话带来了狂喜，好像这件事已经确定无疑，好像这次远征已经成行，好像童年的奇迹已经历历在目：链子、船桨、海水、小船、从船底跳过的波浪、海风、鱼、鱼叉、鲭鱼、鳕鱼、龙虾、水桶、绳索、雨、阳光、甲板、岸上的声音、海鸥、星星、月亮、云、雨、阳光、甲板、船帆、桅杆、海浪、鱼、海鸥、星星、月亮、云、雨、阳光……（弗吉尼亚·伍尔芙《到灯塔去》）
 
 word:vitno
@@ -1013,7 +1025,7 @@ phonetic_symbols:/ˈvit.nə/
 word:zödo
 explanation:奇迹；神迹
 part_of_speech:n.
-phonetic_symbols:/ˈzø.də/
+phonetic_symbols:/ˈzʌ.də/
 
 word:oko
 explanation:眼睛；目
@@ -1044,7 +1056,7 @@ phonetic_symbols:/ˈrɪ.bə/
 word:ostrohö
 explanation:鱼叉
 part_of_speech:n.
-phonetic_symbols:/ɔsˈtrɔ.hø/
+phonetic_symbols:/ɔsˈtrɔ.hʌ/
 
 word:mekre
 explanation:鲭鱼；鲭
@@ -1059,7 +1071,7 @@ phonetic_symbols:/ˈtrɪs.kə/
 word:ömare
 explanation:龙虾
 part_of_speech:n.
-phonetic_symbols:/ˈø.ma.rə/
+phonetic_symbols:/ˈʌ.ma.rə/
 
 word:vedro
 explanation:桶；水桶
@@ -1069,12 +1081,12 @@ phonetic_symbols:/ˈvɛ.drə/
 word:mötuö
 explanation:绳索；绳子
 part_of_speech:n.
-phonetic_symbols:/møˈtu.ø/
+phonetic_symbols:/mʌˈtu.ʌ/
 
 word:palöbe
 explanation:甲板；舱面
 part_of_speech:n.
-phonetic_symbols:/paˈlø.bə/
+phonetic_symbols:/paˈlʌ.bə/
 
 word:chajke
 explanation:海鸥
@@ -1089,17 +1101,17 @@ phonetic_symbols:/ˈvit.rə/
 word:söwe
 explanation:桅；桅杆
 part_of_speech:n.
-phonetic_symbols:/ˈsø.wə/
+phonetic_symbols:/ˈsʌ.wə/
 
 word:weswö
 explanation:代表；议员；代议士
 part_of_speech:n.
-phonetic_symbols:/ˈwɛs.wø/
+phonetic_symbols:/ˈwɛs.wʌ/
 
 word:zöret
 explanation:代表（替…说话）；作为…的代表
 part_of_speech:vt.
-phonetic_symbols:/ˈzø.rɛt/
+phonetic_symbols:/ˈzʌ.rɛt/
 grammar_note:用法 zöret of + 所代表的机构
 
 word:urade
@@ -1116,7 +1128,7 @@ grammar_note:由 onthit（国家）与 urade（政府）组成，专名
 word:zböre
 explanation:大会；集会；议会
 part_of_speech:n.
-phonetic_symbols:/ˈzbø.rə/
+phonetic_symbols:/ˈzbʌ.rə/
 
 word:zvit
 explanation:报告；汇报
@@ -1132,7 +1144,7 @@ phonetic_symbols:/rɔˈbɔ.tə/
 word:rözhö
 explanation:审议；审阅；考究
 part_of_speech:vt.
-phonetic_symbols:/ˈrø.ʒø/
+phonetic_symbols:/ˈrʌ.ʒʌ/
 
 word:sogow
 explanation:政协；政治协商会议
@@ -1148,7 +1160,7 @@ phonetic_symbols:/ˈdum.kə/
 word:pochö
 explanation:开端；开始；起始
 part_of_speech:n.
-phonetic_symbols:/ˈpɔ.xø/
+phonetic_symbols:/ˈpɔ.xʌ/
 
 word:provede
 explanation:贯彻；施行；推行
@@ -1159,7 +1171,7 @@ grammar_note:过去式 provödez 可作形容词（贯彻的）
 word:partö
 explanation:党；政党
 part_of_speech:n.
-phonetic_symbols:/ˈpar.tø/
+phonetic_symbols:/ˈpar.tʌ/
 
 word:düs
 explanation:精神；魂魄；心神
@@ -1169,17 +1181,17 @@ phonetic_symbols:/dys/
 word:pïvö
 explanation:第一的；首个的；最初的
 part_of_speech:adj.
-phonetic_symbols:/ˈpi.vø/
+phonetic_symbols:/ˈpi.vʌ/
 
 word:zököne
 explanation:法律；法；法典
 part_of_speech:n.
-phonetic_symbols:/zøˈkø.nə/
+phonetic_symbols:/zʌˈkʌ.nə/
 
 word:zökönly
 explanation:依法地；合法地
 part_of_speech:adv.
-phonetic_symbols:/zøˈkø.nlɪ/
+phonetic_symbols:/zʌˈkʌ.nlɪ/
 grammar_note:由 zököne（法律）加 -ly 构成
 
 word:posade
@@ -1190,12 +1202,12 @@ phonetic_symbols:/pɔˈsa.də/
 word:skladnö
 explanation:复杂的；繁复的
 part_of_speech:adj.
-phonetic_symbols:/ˈsklad.nø/
+phonetic_symbols:/ˈsklad.nʌ/
 
 word:mezö
 explanation:国际；国与国之间
 part_of_speech:n.
-phonetic_symbols:/ˈme.zø/
+phonetic_symbols:/ˈme.zʌ/
 
 word:perebude
 explanation:改革；变革
@@ -1205,7 +1217,7 @@ phonetic_symbols:/pe.rəˈbu.də/
 word:razvö
 explanation:发展；增长；进展
 part_of_speech:n.
-phonetic_symbols:/ˈraz.vø/
+phonetic_symbols:/ˈraz.vʌ/
 
 word:stalbe
 explanation:稳定的；稳固的；坚实的@@@稳定地；稳稳地
@@ -1220,7 +1232,7 @@ phonetic_symbols:/zaˈda.nə/
 word:wödro
 explanation:核心；内核；中心点
 part_of_speech:n.
-phonetic_symbols:/ˈwø.drə/
+phonetic_symbols:/ˈwʌ.drə/
 
 word:towore
 explanation:同志；同伴
@@ -1230,12 +1242,12 @@ phonetic_symbols:/tɔˈvɔ.rə/
 word:tsentrö
 explanation:中央；中枢
 part_of_speech:n.
-phonetic_symbols:/ˈtsɛn.trø/
+phonetic_symbols:/ˈtsɛn.trʌ/
 
 word:wednö
 explanation:团结；联合；凝聚
 part_of_speech:vt.
-phonetic_symbols:/ˈwɛd.nø/
+phonetic_symbols:/ˈwɛd.nʌ/
 
 word:wede
 explanation:带领；引导；率
@@ -1245,7 +1257,7 @@ phonetic_symbols:/ˈwɛ.də/
 word:naröd
 explanation:民族；族群；部族
 part_of_speech:n.
-phonetic_symbols:/naˈrød/
+phonetic_symbols:/naˈrʌd/
 grammar_note:复数 narödp
 
 word:vitrime
@@ -1286,7 +1298,7 @@ phonetic_symbols:/staˈra.nə/
 word:trudnö
 explanation:艰辛的；困难的
 part_of_speech:adj.
-phonetic_symbols:/ˈtrud.nø/
+phonetic_symbols:/ˈtrud.nʌ/
 
 word:korone
 explanation:冠状病毒
@@ -1302,17 +1314,17 @@ phonetic_symbols:/ɛˈpɛ.dɔ.mə/
 word:fendö
 explanation:防控；防疫；镇守
 part_of_speech:vt.
-phonetic_symbols:/ˈfɛn.dø/
+phonetic_symbols:/ˈfɛn.dʌ/
 
 word:peröx
 explanation:转段；过渡；转移
 part_of_speech:vi.
-phonetic_symbols:/pəˈrøx/
+phonetic_symbols:/pəˈrʌx/
 
 word:premöhö
 explanation:胜利；凯旋
 part_of_speech:n.
-phonetic_symbols:/prɛˈmø.hø/
+phonetic_symbols:/prɛˈmʌ.hʌ/
 
 word:ekonom
 explanation:经济；经济学理
@@ -1322,7 +1334,7 @@ phonetic_symbols:/eˈkɔ.nɔm/
 word:golvö
 explanation:主要的；首要的；总体的
 part_of_speech:adj.
-phonetic_symbols:/ˈɡɔl.vø/
+phonetic_symbols:/ˈɡɔl.vʌ/
 
 word:mète
 explanation:目标；标的
@@ -1343,7 +1355,7 @@ grammar_note:过去式 prosovez
 word:trimö
 explanation:保持；持守；维持
 part_of_speech:vt.
-phonetic_symbols:/ˈtrɪ.mø/
+phonetic_symbols:/ˈtrɪ.mʌ/
 grammar_note:过去式 trimez
 
 word:bude
@@ -1354,7 +1366,7 @@ phonetic_symbols:/ˈbu.də/
 word:sovrö
 explanation:现代的；现代化的；新式的
 part_of_speech:adj.
-phonetic_symbols:/ˈsɔʊ.rø/
+phonetic_symbols:/ˈsɔʊ.rʌ/
 
 word:kroke
 explanation:步伐；脚步；步子
@@ -1364,7 +1376,7 @@ phonetic_symbols:/ˈkrɔ.kə/
 word:povnö
 explanation:完全的；全面的；圆满的@@@完全地
 part_of_speech:adj.@@@adv.
-phonetic_symbols:/ˈpɔv.nø/
+phonetic_symbols:/ˈpɔv.nʌ/
 
 word:tcha
 explanation:茶；茶水
@@ -1379,7 +1391,7 @@ phonetic_symbols:/ˈkɔw.tɔk/
 word:wemö
 explanation:浸泡；泡；浸
 part_of_speech:vi.
-phonetic_symbols:/ˈwɛ.mø/
+phonetic_symbols:/ˈwɛ.mʌ/
 grammar_note:过去式 wemöz
 
 word:smatke
@@ -1429,7 +1441,7 @@ grammar_note:过去式 trafez
 word:nasolöde
 explanation:快感；悦感；享受
 part_of_speech:n.
-phonetic_symbols:/na.sɔˈlø.də/
+phonetic_symbols:/na.sɔˈlʌ.də/
 example_sentence:1.Io caz ö kowtok of tcha; ö madlenke'kroshe lo'sas wemöz of tcha'rowex. Tiłe phow kowtok torkez io'podneben, io drižez lo'nein'ktrolne; io stopez, sosredez of ö xfin lo'sigf dat trafez of io. Ö nasolöde lo'yomark napatez of io; li lo'izole oöt rien'helpe, nein bafow of rori twhas kmnoz, oöt nein bafow of zokö kmnoz. Aeansas li wödöz io floë: zywö'perezen lo'rien'wasne, zywö'kawelap lo'rien'wasne, zywö'kratke ðoñejph snïwe; ðoñejph liube, li napovnez io of ö sutne lo'tsinne; ilu dotne sol, phow'sutne nie poëtz of io, li geko poëtz io'étd. Io nein tüne floë étd lo'owörne, lo'vipadke oöt lo'smirne. Of rori twhas kmnoz phow'doneöpolitöka lo'rarö? Io floë, li poëtz apond smakö of tcha oöt madlenke, cut li kruspez bezkoñö of dat'smakö, nein oulue tozön of td. Neio li foßly kmnoz of rori twhas? Li twik rori? Oöt of jekke io oulue lovö of td? Io caz lowv'kowtok; floë li nein piz'kharö deat pïvö'kowtok; io caz öta'kowtok; floë li mene troske deat lowv'kowtok. Io nehel stope. Phow'deje vlook swabne. Jawö, istöne dat io søka nie poëtz of tcha'rowex, cut poëtz of io'serce'rowex.###我喝了一口茶，茶里浸泡着一小块玛德莱娜蛋糕的碎屑。当这口茶接触到我的上颚时，我不禁打了个哆嗦，我停住了，全神贯注于在我身上发生的非同寻常的事情。一种美妙的快感侵袭了我，它孤立无援，不知来自何处，也不知为何而来。它立刻使我觉得人生的沧桑无关紧要，人生的灾难无足轻重，人生的短暂犹如梦幻，它像爱情一样，用一种珍贵的本质充满了我，或者更确切地说，这种本质并不是在我身上，它就是我自己。我不再觉得自己是平庸的、偶然的、会死的。这种强烈的快乐是从哪里来的？我觉得它和茶与蛋糕的味道有关，但它又无限地超越了这种味道，不可能与它同质，那么它究竟从哪里来？意味着什么？我怎样才能捕捉到它？我喝了第二口，觉得它并不比第一口更有魔力，我喝了第三口，觉得它比第二口更少了一些。我该停止喝了。这种效力似乎在减弱。显然，我所寻求的真理不在茶里，而在我的心里。（马塞尔·普鲁斯特《追忆似水年华》）
 
 word:napate
@@ -1446,18 +1458,18 @@ phonetic_symbols:/iˈzɔ.lə/
 word:zokö
 explanation:为何；为什么
 part_of_speech:conj.
-phonetic_symbols:/ˈzɔ.kø/
+phonetic_symbols:/ˈzɔ.kʌ/
 
 word:wödö
 explanation:使；令；让
 part_of_speech:vt.
-phonetic_symbols:/ˈwø.dø/
+phonetic_symbols:/ˈwʌ.dʌ/
 grammar_note:使役动词，用法 wödö + 宾语 + 动词
 
 word:zywö
 explanation:生命；人生；性命
 part_of_speech:n.
-phonetic_symbols:/ˈzɪ.vø/
+phonetic_symbols:/ˈzɪ.vʌ/
 
 word:perezen
 explanation:变故；沧桑；世事起落
@@ -1512,7 +1524,7 @@ phonetic_symbols:/ˈdɔt.nə/
 word:owörne
 explanation:平庸的；平平无奇的；凡俗的
 part_of_speech:adj.
-phonetic_symbols:/ˈɔ.wø.rnə/
+phonetic_symbols:/ˈɔ.wʌ.rnə/
 
 word:vipadke
 explanation:偶然的；偶然性的；巧合的
@@ -1527,27 +1539,27 @@ phonetic_symbols:/ˈsmi.rnə/
 word:rarö
 explanation:强烈的；猛烈的；炽烈的
 part_of_speech:adj.
-phonetic_symbols:/ˈra.rø/
+phonetic_symbols:/ˈra.rʌ/
 
 word:smakö
 explanation:味道；滋味；风味
 part_of_speech:n.
-phonetic_symbols:/ˈsma.kø/
+phonetic_symbols:/ˈsma.kʌ/
 
 word:bezkoñö
 explanation:无限的@@@无限地；无穷地
 part_of_speech:adj.@@@adv.
-phonetic_symbols:/beˈzkø.nø/
+phonetic_symbols:/beˈzkʌ.nʌ/
 
 word:tozön
 explanation:同质的；同源的；本性相同的
 part_of_speech:adj.
-phonetic_symbols:/ˈtɔ.zøn/
+phonetic_symbols:/ˈtɔ.zʌn/
 
 word:kharö
 explanation:魔力；魔法；魅力
 part_of_speech:n.
-phonetic_symbols:/ˈxa.rø/
+phonetic_symbols:/ˈxa.rʌ/
 
 word:mene
 explanation:更少的；较少的@@@更少地
@@ -1572,14 +1584,998 @@ phonetic_symbols:/ˈswab.nə/
 word:jawö
 explanation:显然地；明摆着；明明
 part_of_speech:adv.
-phonetic_symbols:/ˈja.wø/
+phonetic_symbols:/ˈja.wʌ/
 
 word:istöne
 explanation:真理；真实；真谛
 part_of_speech:n.
-phonetic_symbols:/ɪˈstø.nə/
+phonetic_symbols:/ɪˈstʌ.nə/
 
 word:serce
 explanation:心；心脏；心田
 part_of_speech:n.
 phonetic_symbols:/ˈsɛr.tsə/
+
+word:toröp
+explanation:匆匆；匆忙@@@匆匆的；匆忙的
+part_of_speech:n.@@@adj.
+phonetic_symbols:/ˈtɔ.rʌp/
+grammar_note:由词根 tor-（疾行）与表状态的后缀 -öp 构成；其副词形式为 toröply（匆匆地）
+
+word:toröply
+explanation:匆匆地；仓促地
+part_of_speech:adv.
+phonetic_symbols:/ˈtɔr.ʌp.lj/
+grammar_note:由 toröp（匆匆）后接副词后缀 -ly 构成
+
+word:lastovka
+explanation:燕子
+part_of_speech:n.
+phonetic_symbols:/lɑˈstɔv.kɑ/
+grammar_note:取燕子轻掠之翅感，由 lasta（疾掠）与鸟类名后缀 -vka 构成
+example_sentence:1.Lastovkap goz, oöt hovö däte aka kmno; wivöp wehez, oöt hovö däte aka wédie; perzö'voöforp vëdez, oöt hovö däte aka voöfor.###燕子去了，有再来的时候；杨柳枯了，有再青的时候；桃花谢了，有再开的时候。（朱自清《匆匆》）
+
+word:wivö
+explanation:柳；杨柳；柳树
+part_of_speech:n.
+phonetic_symbols:/ˈwi.vʌ/
+grammar_note:由 wi（柔软垂枝之感）与树类名后缀 -vö 构成
+
+word:perzö
+explanation:桃；桃树
+part_of_speech:n.
+phonetic_symbols:/ˈpɛr.zʌ/
+grammar_note:由 per（春芽）与果木名后缀 -zö 构成；桃花为 perzö'voöfor
+
+word:lovekely
+explanation:聪明的；睿智的；慧黠的
+part_of_speech:adj.
+phonetic_symbols:/lɔˈvɛ.kəl̪j/
+grammar_note:由 lovekia（明察）与形容词后缀 -ely 构成
+
+word:krade
+explanation:偷；窃取
+part_of_speech:vt.
+phonetic_symbols:/ˈkrɑ.də/
+grammar_note:由 krada（窃取之根）加上动词后缀 -e 构成
+
+word:skaö
+explanation:藏；隐藏；藏匿
+part_of_speech:vt.
+phonetic_symbols:/skɑˈʌ/
+grammar_note:由 ska（遮蔽）与动词化后缀 -ö 构成
+
+word:utïse
+explanation:逃走；逃跑；逃离
+part_of_speech:vi.
+phonetic_symbols:/uˈti.zə/
+grammar_note:由 ut（离开）与 -ïse（疾去之状）构成
+
+word:ruka
+explanation:手；手掌
+part_of_speech:n.
+phonetic_symbols:/ˈru.kɑ/
+grammar_note:由 ru（抓持之根）与身体部位后缀 -ka 构成
+
+word:nögap
+explanation:脚；足
+part_of_speech:n.
+phonetic_symbols:/ˈnʌ.gɑp/
+grammar_note:由 nöga（立于其上之根）与表成对部位的后缀 -p 构成；区别于 kroke（脚步）
+
+word:wehe
+explanation:枯萎；干枯；枯槁
+part_of_speech:vi.
+phonetic_symbols:/ˈwɛ.hə/
+grammar_note:由水感词根 we 反向引申出失水干枯之意，加形态变化后缀 -he 构成
+
+word:vëd
+explanation:凋谢；败落
+part_of_speech:vi.
+phonetic_symbols:/vød/
+grammar_note:由 vë（坠落）与完成体后缀 -d 构成
+
+word:myte
+explanation:洗；清洗
+part_of_speech:vt.
+phonetic_symbols:/ˈməi.tə/
+grammar_note:由 my（净）与动作后缀 -te 构成
+example_sentence:1.Io mytez of ruka.###我洗了手。
+
+word:igölka
+explanation:针；细针
+part_of_speech:n.
+phonetic_symbols:/iˈgʌl.kɑ/
+grammar_note:由 igö（刺扎之根）与细长器物后缀 -lka 构成
+
+word:kroe
+explanation:尖；尖端；锋芒
+part_of_speech:n.
+phonetic_symbols:/krɔ.e/
+grammar_note:由 kro（锐）与名词化后缀 -e 构成
+
+word:kapne
+explanation:滴；水珠；一滴
+part_of_speech:n.
+phonetic_symbols:/ˈkɑp.nə/
+grammar_note:由 kap（点滴垂落之感）与小物后缀 -ne 构成
+
+word:onüze
+explanation:泪；眼泪
+part_of_speech:n.
+phonetic_symbols:/ɔˈny.zə/
+grammar_note:由 oñ（目之变体）与 üze（溢之变体）构成，即"目中溢出"
+example_sentence:1.Onüzep tsewöz of löse.###泪水流满面庞。
+
+word:pote
+explanation:汗；汗水
+part_of_speech:n.
+phonetic_symbols:/ˈpɔ.tə/
+grammar_note:由 po（肤）与 -te（渗出）构成
+
+word:sönje
+explanation:影子；影
+part_of_speech:n.
+phonetic_symbols:/ˈsʌn.jə/
+grammar_note:由 sön（暗影）与 -je（投映之物）构成
+
+word:vertö
+explanation:旋转；转动；打转
+part_of_speech:vi.
+phonetic_symbols:/ˈvɛr.tʌ/
+grammar_note:由 vert（绕行）与动词化后缀 -ö 构成
+
+word:merette
+explanation:挪移；缓缓移动
+part_of_speech:vi.
+phonetic_symbols:/mɛˈrɛt.tə/
+grammar_note:由 mere（缓）与 -tte（移动）构成
+
+word:browö
+explanation:徘徊；踯躅
+part_of_speech:vi.
+phonetic_symbols:/ˈbrɔ.wʌ/
+grammar_note:由 brow（往复）与 -ö 构成
+
+word:soköly
+explanation:悄悄地；默默地；沉默地
+part_of_speech:adv.
+phonetic_symbols:/sɔˈkʌ.lj/
+grammar_note:由 sokö（无声）与副词后缀 -ly 构成
+
+word:özdöre
+explanation:叹息；叹气@@@叹息声
+part_of_speech:vi.@@@n.
+phonetic_symbols:/ˈʌz.dʌ.rə/
+grammar_note:由 öz（气息）与 döre（泄出）构成，即"叹气"
+example_sentence:1.Io phesnez löse oöt özdörez.###我掩着面叹息。
+
+word:wokne
+explanation:睁开
+part_of_speech:vt.
+phonetic_symbols:/ˈwɔk.nə/
+grammar_note:由 wok（开启）与 -ne（目之变体）构成，即"开目"
+
+word:pïpe
+explanation:伸出（手等）
+part_of_speech:vt.
+phonetic_symbols:/piː.pə/
+grammar_note:由 pï（向前）与 -pe（探出）构成
+
+word:dohre
+explanation:遮挽；拦挡；挽留
+part_of_speech:vt.
+phonetic_symbols:/ˈdɔx.rə/
+grammar_note:由 doh（拦）与 -re（挽牵引）构成
+
+word:phesne
+explanation:掩；遮蔽（面）
+part_of_speech:vt.
+phonetic_symbols:/ˈpɛs.nə/
+grammar_note:由 phes（覆盖）与 -ne 构成
+
+word:tömlun
+explanation:天黑；入夜；夜幕降临
+part_of_speech:vi.
+phonetic_symbols:/ˈtʌm.lun/
+grammar_note:由 tömnö（黑暗的）派生的动词形，即"变暗"
+
+word:hontpe
+explanation:飞；飞翔
+part_of_speech:vi.
+phonetic_symbols:/ˈxɔnt.pə/
+grammar_note:由 hontp（飞）派生的动词形
+example_sentence:1.Lastovka hontpez wrop oke.###燕子向上飞去。
+
+word:twire
+explanation:闪过；闪烁
+part_of_speech:vi.
+phonetic_symbols:/ˈtwi.rə/
+grammar_note:由 twi（一闪）与 -re 构成
+
+word:razdane
+explanation:吹散
+part_of_speech:vt.
+phonetic_symbols:/rɑzˈdɑ.nə/
+grammar_note:由 raz（四散）与 dane（吹之变体）构成
+
+word:parö
+explanation:蒸融；蒸散；化为气
+part_of_speech:vt.
+phonetic_symbols:/ˈpɑ.rʌ/
+grammar_note:由 par（气）与动词化 -ö 构成，即"化为气"
+
+word:slyede
+explanation:痕迹；踪迹；遗迹
+part_of_speech:n.
+phonetic_symbols:/ˈsləi.də/
+grammar_note:由 slye（遗留之根）与 -de（留存之物）构成，与 jyze（游丝）等意象同族
+
+word:lefze
+explanation:留下；留存
+part_of_speech:vt.
+phonetic_symbols:/ˈlɛf.zə/
+grammar_note:由 lef（剩余）与 -ze（放置）构成
+
+word:gölly
+explanation:赤裸的；光着的
+part_of_speech:adj.
+phonetic_symbols:/ˈgʌl.lj/
+grammar_note:由 göl（裸露）与形容词后缀 -ly 构成
+
+word:plyzö
+explanation:甘心；心平；平静接受
+part_of_speech:vi.
+phonetic_symbols:/ˈpləi.zʌ/
+grammar_note:由 plyz（平缓）与 -ö 构成，即"心气平定"
+
+word:šoröly
+explanation:白白地；徒劳地
+part_of_speech:adv.
+phonetic_symbols:/ʃɔˈrʌ.lj/
+grammar_note:由 šorö（两手空空）与副词后缀 -ly 构成
+
+word:rumtöly
+explanation:迷茫的；茫茫然的
+part_of_speech:adj.
+phonetic_symbols:/rumˈtʌ.lj/
+grammar_note:由 rumt（迷失）与 -öly 构成
+
+word:cvïre
+explanation:照射；投射（光线）
+part_of_speech:vt.
+phonetic_symbols:/ˈtsviː.rə/
+grammar_note:由 cvï（射）与 -re 构成
+example_sentence:1.Aean'luön lo'xlina cvïrez of ö röme'rowex.###斜斜的阳光射进屋子里。
+
+word:stiprely
+explanation:凝然的；定睛不动的
+part_of_speech:adj.@@@adv.
+phonetic_symbols:/stiˈprɛ.lj/
+grammar_note:由 stipre（凝住）与 -ly 构成
+
+word:wödö
+explanation:八
+part_of_speech:num.
+phonetic_symbols:/ˈwʌd.ʌ/
+grammar_note:计数词根 wöd 与数词后缀 -ö 构成；八千为 wödö'xalö
+
+word:may
+explanation:做；行事；着手
+part_of_speech:vt.
+phonetic_symbols:/mɑj/
+grammar_note:由 ma（行）与 -y 构成
+
+word:opntö
+explanation:数；计算；盘算
+part_of_speech:vt.
+phonetic_symbols:/ˈɔpnt.ʌ/
+grammar_note:由 opnt（数字）派生的动词形
+example_sentence:1.Opntö of soköly.###在默默里算着。
+
+word:wadnö
+explanation:盆；水盆
+part_of_speech:n.
+phonetic_symbols:/ˈwɑd.nʌ/
+grammar_note:由 wad（盛水）与 -nö（容器后缀）构成
+
+word:miskö
+explanation:碗；碗盏
+part_of_speech:n.
+phonetic_symbols:/ˈmis.kʌ/
+grammar_note:由 mis（盛）与食器后缀 -kö 构成
+
+word:dömka
+explanation:雾；薄雾
+part_of_speech:n.
+phonetic_symbols:/ˈdʌm.kɑ/
+grammar_note:由 döm（蒙蔽）与 -ka 构成
+
+word:vörte
+explanation:门；大门
+part_of_speech:n.
+phonetic_symbols:/ˈvʌr.tə/
+grammar_note:由 vör（出入之口）与 -te 构成
+
+word:he
+explanation:吧；呢；啊（舒缓、疑问或感叹语气词）
+part_of_speech:int.@@@conj.
+phonetic_symbols:/hə/
+grammar_note:句末语气词，缀于疑问或感叹句尾，使语气舒缓
+
+word:aeanese
+explanation:时间的；时间之（aeanes 的属位/定语连读形式）
+part_of_speech:conj.
+phonetic_symbols:/aɪˈniː.sə/
+grammar_note:由 aeanes（时间）与属格词尾 -e 连读而成；如 aeanese'jyze（时间的游丝）
+
+word:nokt
+explanation:夜；夜晚
+part_of_speech:n.
+phonetic_symbols:/nɔkt/
+grammar_note:rowex'nokt 意为午夜，仿 rowexaean（中午）构式
+
+word:boj
+explanation:战斗；作战
+part_of_speech:n.
+phonetic_symbols:/bɔdʒ/
+grammar_note:动词词干 bo（斗）与名词后缀 -j 构成
+example_sentence:1.Loñwaskul'fröce'boj mayz of rowex'nokt of lowvly daiy.###渡江战斗于二十日午夜开始。（毛泽东《我三十万大军胜利南渡长江》）
+
+word:fendöseo
+explanation:防线
+part_of_speech:n.
+phonetic_symbols:/ˈfɛn.dʌ.sɛ.ɔ/
+grammar_note:由 fendö（防控）与 seo（线）构成，仿 frontseo（前线）构式
+
+word:reaktionar
+explanation:反动派
+part_of_speech:n.
+phonetic_symbols:/rɛ.akˈtjɔ.nar/
+grammar_note:由 reak（反应）与 -tionar（…派者）构成
+
+word:vorsitz
+explanation:主席
+part_of_speech:n.
+phonetic_symbols:/ˈvɔr.sits/
+grammar_note:由 vor（前）与 sitz（座/位）构成
+
+word:golvö'wede'cai
+explanation:总司令
+part_of_speech:n.
+phonetic_symbols:/ˈgɔl.vʌ ˈwɛ.də kaɪ/
+grammar_note:由 golvö（总）与 wede'cai（统帅者）构成
+
+word:Onthit'perkua'partö
+explanation:国民党；国民之党
+part_of_speech:n.
+phonetic_symbols:/ˈɔn.tɕit ˈpɛr.kwa ˈpar.tʌ/
+grammar_note:由 Onthit（国家）与 perkua'partö（民党）构成；与 Onthit'urade（国务院）同类构式
+
+word:Mao
+explanation:毛（姓氏）
+part_of_speech:n.
+phonetic_symbols:/maʊ/
+grammar_note:姓氏或人名音译，同 Ju
+
+word:Ju
+explanation:朱（姓氏）
+part_of_speech:n.
+phonetic_symbols:/dʒuː/
+grammar_note:姓氏或人名音译，同 Mao
+
+word:Vuhu
+explanation:芜湖（城市名）
+part_of_speech:n.
+phonetic_symbols:/ˈvuː.huː/
+grammar_note:城市名音译，同 Peakin（北京）
+
+word:Ankyn
+explanation:安庆（城市名）
+part_of_speech:n.
+phonetic_symbols:/ˈæn.kjɪn/
+grammar_note:城市名音译，同 Peakin（北京）
+
+word:Fanchaan
+explanation:繁昌（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈfæn.tɕɑːn/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Tonglin
+explanation:铜陵（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈtɔŋ.lɪn/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Qingyan
+explanation:青阳（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈtɕɪŋ.jæn/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Digang
+explanation:荻港（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈdi.gɑːŋ/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Lugang
+explanation:鲁港（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈlu.gɑːŋ/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:seo
+explanation:线；条线
+part_of_speech:n.
+phonetic_symbols:/sɛ.ɔ/
+grammar_note:由 frontseo（前线）等复合词中析出的词根 seo；如 chank'seo（铁路线）
+
+word:wenö
+explanation:先；首先
+part_of_speech:adv.
+phonetic_symbols:/ˈwɛ.nʌ/
+grammar_note:由 wen（先）与 -ö 构成
+example_sentence:1.Of rowex'nokt of lowvly daiy, rowex'kwande of perkua'Libertar'kwande of Loñwaskul'pivex'bröge, wenö kruspez Ankyn-Vuhu'seo.###二十日夜起，长江北岸人民解放军中路军首先突破安庆、芜湖线。（毛泽东《人民解放军百万大军横渡长江》）
+
+word:nölö
+explanation:很；甚；十分
+part_of_speech:adv.@@@adj.
+phonetic_symbols:/ˈnʌ.lʌ/
+grammar_note:由 nöl（重）与 -ö 构成
+
+word:línde
+explanation:段；路段
+part_of_speech:n.
+phonetic_symbols:/ˈliːn.də/
+grammar_note:由 lín（截）与 -de 构成；「……段」为前词 'línde
+
+word:klöre
+explanation:剩余；余下
+part_of_speech:n.
+phonetic_symbols:/ˈklʌ.rə/
+grammar_note:由 klör（剩）与 -e 构成；余部为 lo'klöre'p
+
+word:pötte
+explanation:部分；份额
+part_of_speech:n.
+phonetic_symbols:/ˈpʌ.tə/
+grammar_note:由 pöt（分）与 -te 构成；大部为 oñerg pötte
+
+word:söïde
+explanation:侧；方面
+part_of_speech:n.
+phonetic_symbols:/ˈsʌ.i.də/
+grammar_note:由 söi（旁）与 -de 构成；söïde'ö 与 söïde'lowv 表「一方面……另一方面」
+
+word:attit
+explanation:关联；关系
+part_of_speech:n.
+phonetic_symbols:/aˈtit/
+grammar_note:由 at（相）与 tit（系）构成
+
+word:lone
+explanation:华里；里（市制长度单位）
+part_of_speech:n.
+phonetic_symbols:/ˈlɔ.nə/
+grammar_note:市制长度计量词，音译规则同专名
+
+word:mirö
+explanation:和平
+part_of_speech:n.
+phonetic_symbols:/ˈmi.rʌ/
+grammar_note:由 mir（宁）与 -ö 构成；mirö'konvend 为和平协定
+
+word:konvend
+explanation:协定；条约
+part_of_speech:n.
+phonetic_symbols:/kɔnˈvɛnd/
+grammar_note:由 kon（共）与 vend（约）构成
+
+word:signö
+explanation:签署；签订
+part_of_speech:vt.
+phonetic_symbols:/ˈsɪgn.ʌ/
+grammar_note:由 sign（印）与 -ö 构成
+
+word:tweñö
+explanation:拒绝；拒不
+part_of_speech:vt.
+phonetic_symbols:/ˈtwɛ.ɲʌ/
+grammar_note:由 tweñ（推拒）与 -ö 构成
+
+word:povrö
+explanation:罪犯；罪人
+part_of_speech:n.
+phonetic_symbols:/ˈpɔv.rʌ/
+grammar_note:由 pov（罪）与 -rö（者）构成；战犯为 boj'povrö
+
+word:survö
+explanation:监督；督
+part_of_speech:vt.
+phonetic_symbols:/ˈsʊr.vʌ/
+grammar_note:由 surv（督视）与 -ö 构成；督战为 survö boj
+
+word:olitsir
+explanation:军官
+part_of_speech:n.
+phonetic_symbols:/ɔˈlɪt.sir/
+grammar_note:由 olits（职衔）与 -ir（人）构成；士兵为 ppiet
+
+word:osne
+explanation:听见；听闻
+part_of_speech:vt.
+phonetic_symbols:/ˈɔs.nə/
+grammar_note:由 osn（听）与 -e 构成
+
+word:xvötö
+explanation:泄气；灰心
+part_of_speech:vi.
+phonetic_symbols:/ˈxvʌ.tʌ/
+grammar_note:由 xvöt（泄）与 -ö 构成
+
+word:zivrö
+explanation:抵抗；抗拒
+part_of_speech:n.@@@vt.
+phonetic_symbols:/ˈziv.rʌ/
+grammar_note:由 zivr（拦挡）与 -rö（名物）构成；抵抗者为 zivrö'cai
+
+word:blokö
+explanation:封锁；封堵
+part_of_speech:vt.
+phonetic_symbols:/ˈblɔ.kʌ/
+grammar_note:由 blok（堵）与 -ö 构成
+
+word:twerpe
+explanation:要塞；堡垒
+part_of_speech:n.
+phonetic_symbols:/ˈtwɛr.pə/
+grammar_note:由 twerp（垒筑）与 -e 构成
+
+word:frontö
+explanation:前锋；先锋
+part_of_speech:n.
+phonetic_symbols:/ˈfrɔn.tʌ/
+grammar_note:由 front（前）与 -ö 构成，同 frontseo（前线）
+
+word:pödö
+explanation:至；到达
+part_of_speech:vt.
+phonetic_symbols:/ˈpʌd.ʌ/
+grammar_note:由 pöd（至）与 -ö 构成
+
+word:zöpne
+explanation:扩展；拓展
+part_of_speech:vi.
+phonetic_symbols:/ˈzʌp.nə/
+grammar_note:由 zöpn（扩张）与 -e 构成
+
+word:kumö
+explanation:微弱的；轻微的
+part_of_speech:adj.
+phonetic_symbols:/ˈku.mʌ/
+grammar_note:由 kum（微）与 -ö 构成
+
+word:zmyrö
+explanation:歼灭；消灭
+part_of_speech:vt.
+phonetic_symbols:/ˈzmɪ.rʌ/
+grammar_note:由 zmyr（扫灭）与 -ö 构成
+
+word:dötre
+explanation:击溃；打垮
+part_of_speech:vt.
+phonetic_symbols:/ˈdʌ.trə/
+grammar_note:由 dötr（击散）与 -e 构成
+
+word:vila
+explanation:希望；期望
+part_of_speech:vt.
+phonetic_symbols:/ˈvi.la/
+grammar_note:由 vil（盼）与 -a 构成
+
+word:wlödö
+explanation:控制；掌握
+part_of_speech:vt.
+phonetic_symbols:/ˈwlʌd.ʌ/
+grammar_note:由 wlöd（扼）与 -ö 构成
+
+word:mwine
+explanation:认为；以为
+part_of_speech:vt.
+phonetic_symbols:/ˈmwi.nə/
+grammar_note:由 mwin（思）与 -e 构成
+
+word:slabne
+explanation:薄弱的@@@弱点
+part_of_speech:adj.@@@n.
+phonetic_symbols:/ˈslab.nə/
+grammar_note:由 slab（薄）与 -ne 构成；弱点为 slabne'twhas
+
+word:zwöde
+explanation:阻挡；挡住
+part_of_speech:vt.
+phonetic_symbols:/ˈzwʌ.də/
+grammar_note:由 zwöd（挡）与 -e 构成
+
+word:poidö
+explanation:整日的；全天的
+part_of_speech:adj.
+phonetic_symbols:/ˈpɔi.dʌ/
+grammar_note:由 poi（全部地）与 daiy（日）缩合而成
+
+word:vorno
+explanation:预定的；事先定下的
+part_of_speech:adj.
+phonetic_symbols:/ˈvɔr.nɔ/
+grammar_note:由 vor（前）与 -no（已然）构成
+
+word:lofö
+explanation:含；包含
+part_of_speech:vt.
+phonetic_symbols:/ˈlɔ.fʌ/
+grammar_note:由 lof（包纳）与 -ö 构成；「不含」为 rien lofö
+
+word:Tan'Enbo
+explanation:汤恩伯（人名）
+part_of_speech:n.
+phonetic_symbols:/tɑn ˈɛn.bɔ/
+grammar_note:人名音译，同 Mao
+
+word:Jiujiang
+explanation:九江（城市名）
+part_of_speech:n.
+phonetic_symbols:/ˈtɕju.dʑjɑŋ/
+grammar_note:城市名音译，同 Peakin（北京）
+
+word:Jiängjin
+explanation:江阴（地名）
+part_of_speech:n.
+phonetic_symbols:/dʑjɑŋˈjin/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Nankin
+explanation:南京（城市名）
+part_of_speech:n.
+phonetic_symbols:/ˈnan.kɪn/
+grammar_note:城市名音译，同 Peakin（北京）
+
+word:Gwechi
+explanation:贵池（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈgwɛ.tɕi/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Yinjiawei
+explanation:殷家汇（地名）
+part_of_speech:n.
+phonetic_symbols:/jin.dʑjaˈwɛi/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Dongliu
+explanation:东流（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈdɔŋ.lju/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Zhide
+explanation:至德（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈdʐɨ.də/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Pengze
+explanation:彭泽（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈpʰəŋ.dzɤ/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Yangzhong
+explanation:扬中（地名）
+part_of_speech:n.
+phonetic_symbols:/ˈjɑŋ.dʐɔŋ/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Zhenjian
+explanation:镇江（城市名）
+part_of_speech:n.
+phonetic_symbols:/ˈdʐən.dʑjæn/
+grammar_note:城市名音译，同 Peakin（北京）
+
+word:Wuxi
+explanation:无锡（城市名）
+part_of_speech:n.
+phonetic_symbols:/ˈwu.ɕi/
+grammar_note:城市名音译，同 Peakin（北京）
+
+word:gwintö
+explanation:步枪（带膛线的长枪）
+part_of_speech:n.
+phonetic_symbols:/ˈɡwɪn.tʌ/
+grammar_note:由 gwint（膛线）与 -ö 构成，指有膛线的长管火器
+example_sentence:1.M14 poëtz gwintö lo'asewe of stvol 7.62×51 drobinö NATO, Sprinfild'zbrojne of vereinigte'onthit razvöz li of M1 Garende'dron.###M14是美国斯普林菲尔德兵工厂在M1加兰德基础上研制的7.62×51mm NATO口径自动步枪（军事装备条目，2026）
+
+word:asewe
+explanation:自动的；自行运转的
+part_of_speech:adj.
+phonetic_symbols:/aˈsɛ.we/
+grammar_note:由 ase（自身）与 -we（运转）构成
+
+word:mön
+explanation:半；一半@@@半（表程度）
+part_of_speech:det.@@@adv.
+phonetic_symbols:/mʌn/
+grammar_note:数性修饰词，与数字并用表示半分
+
+word:stvol
+explanation:枪管；炮管@@@口径（枪管内径）
+part_of_speech:n.@@@n.
+phonetic_symbols:/stvɔl/
+grammar_note:单字根，指枪炮的管及其内径
+
+word:drobinö
+explanation:毫米；千分之一米（长度单位）
+part_of_speech:n.
+phonetic_symbols:/ˈdrɔ.bi.nʌ/
+grammar_note:由 drob（碎小）与 -inö 构成，指千分之一米
+
+word:vörne
+explanation:制式的；标准的；正规的
+part_of_speech:adj.
+phonetic_symbols:/ˈvʌr.ne/
+grammar_note:指军队或官方规定的标准样式
+
+word:swoñe
+explanation:射击；开火
+part_of_speech:vt.
+phonetic_symbols:/ˈswɔ.ɲe/
+grammar_note:单字根动词，向目标发射弹药
+
+word:zargön
+explanation:装填；供弹
+part_of_speech:vt.
+phonetic_symbols:/zaˈrgʌn/
+grammar_note:由 zar（装入）与 -gön 构成，把弹药装进枪械
+
+word:kesde
+explanation:弹匣；弹仓
+part_of_speech:n.
+phonetic_symbols:/ˈkɛs.de/
+grammar_note:盛装待发弹药的匣子
+
+word:patrön
+explanation:子弹；一发弹药
+part_of_speech:n.
+phonetic_symbols:/paˈtrʌn/
+grammar_note:单根名词，指枪弹
+
+word:zbrojne
+explanation:兵工厂；军械厂
+part_of_speech:n.
+phonetic_symbols:/ˈzbɔj.ne/
+grammar_note:由 zbroj（军械）与 -ne 构成，指生产军械的工厂
+
+word:dron
+explanation:基础；根基；底座
+part_of_speech:n.
+phonetic_symbols:/drɔn/
+grammar_note:单字根，指承托他物之根基
+
+word:Sprinfild
+explanation:斯普林菲尔德（城市名）
+part_of_speech:n.
+phonetic_symbols:/ˈsprɪn.fɪld/
+grammar_note:地名音译，同 Peakin（北京）
+
+word:Garende
+explanation:加兰德（M1加兰德步枪名）
+part_of_speech:n.
+phonetic_symbols:/gaˈrɛn.de/
+grammar_note:人名音译，指约翰·加兰德与以他命名的步枪
+
+word:NATO
+explanation:北大西洋公约组织（北约）
+part_of_speech:n.
+phonetic_symbols:/ˈneɪ.toʊ/
+grammar_note:专名缩略，指北大西洋公约组织
+
+word:M1
+explanation:M1步枪（加兰德半自动步枪系列名）
+part_of_speech:n.
+phonetic_symbols:/ˈɛmˈwʌn/
+grammar_note:专名，字母与数字编号
+
+word:M14
+explanation:M14自动步枪（专名）
+part_of_speech:n.
+phonetic_symbols:/ˈɛmˌfɔrˈtin/
+grammar_note:专名，字母与数字编号，同 M1 构式
+
+word:syvm
+explanation:七（个、条、张……）@@@七
+part_of_speech:det.@@@num.
+phonetic_symbols:/sjvm/
+grammar_note:数词，用于计数
+
+word:shturm
+explanation:突击；冲锋（迅猛突入敌阵的战术动作）
+part_of_speech:n.
+phonetic_symbols:/ʃtʊrm/
+grammar_note:单字根，指迅猛突入敌阵的战术动作
+example_sentence:1.M7 poëtz shturm'gwintö of stvol 6.8×51 drobinö, Sigzauer'acufß of vereinigte'onthit razvöz li owej NGSW'projekt of vereinigte'onthit'pot'kwande.###M7步枪是美国西格-绍尔公司为美国陆军“下一代班组武器”（NGSW）计划研制的6.8×51mm口径突击步枪（军事装备条目，2026）
+
+word:Sigzauer
+explanation:西格-绍尔（公司名）
+part_of_speech:n.
+phonetic_symbols:/ˈsɪg.zaʊ.ər/
+grammar_note:公司名音译
+
+word:NGSW
+explanation:下一代班组武器（计划缩写，全称 Next Generation Squad Weapon）
+part_of_speech:n.
+phonetic_symbols:/ˌɛn.dʒiː.ˌɛs.ˌdʌb.əl.juː/
+grammar_note:专名缩略，同 NATO 构式
+
+word:strok
+explanation:行程；冲程（往复运动的距离）
+part_of_speech:n.
+phonetic_symbols:/strɔk/
+grammar_note:单字根，指往复运动所经之距离
+
+word:porne
+explanation:活塞
+part_of_speech:n.
+phonetic_symbols:/ˈpɔr.nə/
+grammar_note:单字根，指汽缸中往复的机件
+
+word:powö
+explanation:气；气体；空气
+part_of_speech:n.
+phonetic_symbols:/ˈpɔ.wʌ/
+grammar_note:单字根，指无形可流动之气
+
+word:wïdö
+explanation:引导；导入；导引
+part_of_speech:vt.
+phonetic_symbols:/ˈwɪ.dʌ/
+grammar_note:由 wï（引）与 -dö 构成，把某物导入某处
+
+word:zasada
+explanation:原理；原则
+part_of_speech:n.
+phonetic_symbols:/zaˈsa.də/
+grammar_note:单字根，指事物遵循之根本法则
+
+word:koriste
+explanation:使用；采用；利用
+part_of_speech:vt.
+phonetic_symbols:/koˈrɪ.ste/
+grammar_note:单字根动词
+
+word:komplekt
+explanation:配置；成套装备
+part_of_speech:n.
+phonetic_symbols:/ˈkɔm.plekt/
+grammar_note:由 komple（配齐）与 -kt 构成，指成套配置
+
+word:zamine
+explanation:取代；替换
+part_of_speech:vt.
+phonetic_symbols:/zaˈmi.ne/
+grammar_note:由 zamin（替换）与 -e 构成
+
+word:zamere
+explanation:旨在；意图在于
+part_of_speech:vt.
+phonetic_symbols:/zaˈmɛ.re/
+grammar_note:由 zame（目标）与 -re 构成，以…为目标
+
+word:karbïne
+explanation:卡宾枪；骑枪（短管步枪）
+part_of_speech:n.
+phonetic_symbols:/karˈbɪ.ne/
+grammar_note:由 karb（短枪）与 -ïne 构成，指短管步枪
+
+word:vhoñe
+explanation:火；火力
+part_of_speech:n.
+phonetic_symbols:/ˈvxɔ.ɲe/
+grammar_note:单字根，指燃烧发光之气
+
+word:wïzerne
+explanation:瞄具；瞄准装置
+part_of_speech:n.
+phonetic_symbols:/wɪˈzɛr.ne/
+grammar_note:由 wïzer（对准）与 -ne 构成，指火器上的瞄准装置
+
+word:M4A1
+explanation:M4A1卡宾枪（专名）
+part_of_speech:n.
+phonetic_symbols:/ˈɛmˌfɔrˌeɪˈwʌn/
+grammar_note:专名，字母与数字编号，同 M1 构式
+
+word:M157
+explanation:M157火控瞄具（专名）
+part_of_speech:n.
+phonetic_symbols:/ˈɛmˌwʌnˌfaɪvˈsɛvən/
+grammar_note:专名，字母与数字编号，同 M1 构式
+
+word:M7
+explanation:M7步枪（专名）
+part_of_speech:n.
+phonetic_symbols:/ˈɛmˈsɛvən/
+grammar_note:专名，字母与数字编号，同 M1 构式
+
+word:hordö
+explanation:武器；兵器
+part_of_speech:n.
+phonetic_symbols:/ˈhɔr.dʌ/
+grammar_note:单字根，指兵器总称
+example_sentence:1.QBZ-191 — to zvate li 191 asewe'gwintö — poëtz shturm'gwintö lo'vörne of nowe'meñe of stvol 5.8 drobinö, 208'instituö of hordö'intewö of Kitanie razvöz li. Li fa 191'serië'gwintö'röde. Of 2019 onthit'sewato'parade, li wenö wïsane publykne.###QBZ-191（也称191式自动步枪）是由中国兵器工业第二〇八研究所研制的新一代5.8毫米口径制式突击步枪，属于191系列枪族，于2019年国庆阅兵首次公开亮相（军事装备条目，2026）
+
+word:intewö
+explanation:工业（营造制造之行业）
+part_of_speech:n.
+phonetic_symbols:/ɪnˈtɛ.wʌ/
+grammar_note:由 inte（造作）与 -wö 构成，指营造制造之行业
+
+word:instituö
+explanation:研究所；研究院（专业机构）
+part_of_speech:n.
+phonetic_symbols:/ɪnˈstɪ.tu.ʌ/
+grammar_note:由 insti（专业机构）与 -tuö 构成，指院所
+
+word:meñe
+explanation:代；世代（一代人）
+part_of_speech:n.
+phonetic_symbols:/ˈme.ɲe/
+grammar_note:单字根，指一代人
+
+word:serië
+explanation:系列；序列
+part_of_speech:n.
+phonetic_symbols:/ˈsɛr.i.ə/
+grammar_note:指同类事物的排列批次
+
+word:zvate
+explanation:称呼；叫作
+part_of_speech:vt.
+phonetic_symbols:/ˈzvɑ.te/
+grammar_note:单字根动词，称说名号
+
+word:sewato
+explanation:节日；庆典；纪念日
+part_of_speech:n.
+phonetic_symbols:/sɛˈwɑ.to/
+grammar_note:指隆重庆典
+
+word:parade
+explanation:阅兵；列队检阅
+part_of_speech:n.
+phonetic_symbols:/paˈrɑ.de/
+grammar_note:指军队列队受检
+
+word:wïsane
+explanation:亮相；露面；公开展示
+part_of_speech:vt.
+phonetic_symbols:/wɪˈsɑ.ne/
+grammar_note:由 wï（显露）与 -sane 构成，露面展示
+
+word:publykne
+explanation:公开的；公之于众的
+part_of_speech:adj.
+phonetic_symbols:/pubˈlɪk.ne/
+grammar_note:由 publyk（公众）与 -ne 构成，公示于众
+
+word:nowe
+explanation:新的；新生的
+part_of_speech:adj.
+phonetic_symbols:/ˈnɔ.we/
+grammar_note:单字根，指新鲜之态
+
+word:QBZ-191
+explanation:QBZ-191（191式自动步枪，专名）
+part_of_speech:n.
+phonetic_symbols:/ˌkjuː.biːˈziː.wʌnˈnaɪn.wʌn/
+grammar_note:专名，字母与数字编号，同 M1 构式
