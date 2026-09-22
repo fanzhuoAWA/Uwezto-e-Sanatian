@@ -3308,7 +3308,7 @@ explanation:尤尼普（姓氏）
 part_of_speech:n.
 grammar_note:乌斯托什的起名规则：一、名字里有三个部分，a、b、c，a是名字，b是中间名，c是姓氏；二、男子的名字a部分是父母取的名字，b部分是父亲的a部分，c部分姓氏就也是父亲的c部分姓氏；三、女子的名字a部分也是父母取的名字，b部分是母亲的a部分，c部分姓氏也是父亲的c部分姓氏。日常生活中一般称呼对方的a部分。
 
-word:jörov
+word:jörav
 explanation:受伤的猎物一瘸一拐留下的深浅不一的脚印
 part_of_speech:n.
-phonetic_symbols:/jʌʁɒv/
+phonetic_symbols:/jʌʁʌv/
