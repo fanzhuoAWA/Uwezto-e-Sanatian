@@ -2579,3 +2579,145 @@ explanation:QBZ-191（191式自动步枪，专名）
 part_of_speech:n.
 phonetic_symbols:/ˌkjuː.biːˈziː.wʌnˈnaɪn.wʌn/
 grammar_note:专名，字母与数字编号，同 M1 构式
+
+word:QJB-201
+explanation:QJB-201班用轻机枪（专名）
+part_of_speech:n.
+phonetic_symbols:/ˌkjuː.dʒeɪˈbiː.tuːˈzɛr.ə.wʌn/
+grammar_note:专名，字母与数字编号，同 QBZ-191 构式
+
+word:kulemet
+explanation:机枪；机关枪
+part_of_speech:n.
+phonetic_symbols:/ˈku.lɛ.mɛt/
+grammar_note:指连发自动射击的枪械；轻机枪为 kulemet lo'löftly
+
+word:druzne
+explanation:班；作战班组；小队
+part_of_speech:n.
+phonetic_symbols:/ˈdru.zne/
+grammar_note:由 dru（编组）与 -zne（组）构成；步兵班为 ppiet'druzne
+
+word:druzne'kulemet
+explanation:班用机枪；班用轻机枪
+part_of_speech:n.
+phonetic_symbols:/ˈdru.zne.ˈku.lɛ.mɛt/
+grammar_note:由 druzne（班）与 kulemet（机枪）组成
+example_sentence:1.QJB-201 poëtz druzne'kulemet lo'löftly of nowe'meñe of Libertar'kwande, of stvol 5.8 drobinö, koriste lowv'seo'zargön of patrönolane oöt kesde, oöt stvol oulue aeansas zamine. Li mayz owej zamine 95'serië'druzne'kulemet, oöt hochö ppiet'druzne'kröwe'torwe'vhoñe.###QJB-201是解放军新一代5.8毫米班用轻机枪，采用弹链/弹匣双路供弹和可快速更换枪管，用于取代95式班用机枪并提升步兵班持续压制火力。（军事装备条目，2026）
+
+word:patrönolane
+explanation:弹链；枪弹链带
+part_of_speech:n.
+phonetic_symbols:/ˌpa.tərˈnɔ.la.nə/
+grammar_note:由 patrön（子弹）与 olane（链）组成
+
+word:kröwe
+explanation:持续的；接连不断的@@@持续地
+part_of_speech:adj.@@@adv.
+phonetic_symbols:/ˈkrʌ.wə/
+grammar_note:由 kröw（延连）与 -e 构成；如 kröwe'vhoñe（持续火力）
+
+word:torwe
+explanation:压制；抑压
+part_of_speech:vt.
+phonetic_symbols:/ˈtɔr.wə/
+grammar_note:由 tor（抑）与 -we 构成；压制火力为 torwe'vhoñe
+
+word:hochö
+explanation:提升；增强；提高
+part_of_speech:vt.
+phonetic_symbols:/ˈxɔ.xʌ/
+grammar_note:由 hoch（高的）加动词化后缀 -ö 构成
+
+word:M250
+explanation:M250轻机枪（专名）
+part_of_speech:n.
+phonetic_symbols:/ˌɛm.ˌtuː.ˈfɪf.ti/
+grammar_note:专名，字母与数字编号，同 QBZ-191 构式
+example_sentence:1.M250 poëtz kulemet lo'löftly of patrönolane'zargön, of stvol 6.8×51 drobinö, Sigzauer'acufß razvöz li. Li poëtz ö pötte of NGSW'projekt of vereinigte'onthit'kwande, owej zamine M249'druzne'kulemet lo'asewe.###M250是由西格-绍尔公司研制的6.8×51mm口径弹链供弹轻机枪，作为美军“下一代班组武器”计划的一部分，用于取代M249班用自动武器。（军事装备条目，2026）
+
+word:M249
+explanation:M249班用自动武器（专名）
+part_of_speech:n.
+phonetic_symbols:/ˌɛm.ˌtuː.ˈfɔr.ti.naɪn/
+grammar_note:专名，字母与数字编号，同 QBZ-191 构式
+example_sentence:1.M249'druzne'kulemet lo'asewe.###M249班用自动武器。
+
+word:vereinigte'onthit'kwande
+explanation:美军；美国军队
+part_of_speech:n.
+phonetic_symbols:/vɛr.əˈnaɪ.kə.ˈɔn.θɪt.ˈkwan.də/
+grammar_note:由 vereinigte'onthit（合众国）与 kwande（军队）组成
+
+word:AWM
+explanation:AWM狙击步枪（专名）
+part_of_speech:n.
+phonetic_symbols:/ˌeɪ.dʌb.əl.juːˈɛm/
+grammar_note:专名，字母与数字编号，同 QBZ-191 构式；AW 为其系列名
+example_sentence:1.AWM poëtz skaswoñe'gwintö lo'zatvore, Precisön'Intewö'acufß of Enkluanz razvöz li. Li fa AW'serië'Magnum'marke, golvöly swoñe patrönp of .300 Winczest'Magnum oöt .338 Lapua'Magnum. Of 1997 järe, li utverdez, oöt bï sigf'kwandep of Enkluanz'pot'kwande koriste.###AWM是英国精密国际公司研制的栓动狙击步枪，属于AW系列的马格南型号，主要发射.300温彻斯特-马格南和.338拉普阿-马格南弹药，1997年定型，被英国陆军特种部队等采用。（军事装备条目，2026）
+
+word:AW
+explanation:AW（狙击步枪系列名）
+part_of_speech:n.
+phonetic_symbols:/ˌeɪˈdʌb.əl.juː/
+grammar_note:专名，枪械系列编号，同 M1 构式
+
+word:Precisön'Intewö
+explanation:精密国际（公司名）
+part_of_speech:n.
+phonetic_symbols:/prɛ.ˈsi.zʌn.ɪnˈtɛ.wʌ/
+grammar_note:公司专名译名，由 Precisön（精密的）与 Intewö（工业）组成；加 acufß 表“公司”实体
+
+word:zatvore
+explanation:栓；枪机；闭锁机构
+part_of_speech:n.
+phonetic_symbols:/ˈzat.vɔ.rə/
+grammar_note:指枪械的闭锁栓机；栓动为 lo'zatvore
+
+word:skaswoñe
+explanation:狙击；伏射
+part_of_speech:n.
+phonetic_symbols:/ˈska.swɔ.ɲe/
+grammar_note:由ska（蔽/伏）与swoñe（射）缩合构成；狙击步枪为 skaswoñe'gwintö
+
+word:Magnum
+explanation:马格南（弹药增装标名）
+part_of_speech:n.
+phonetic_symbols:/ˈmæg.nʊm/
+grammar_note:专用标名，用于弹药与枪械型号
+
+word:Winczest
+explanation:温彻斯特（专名）
+part_of_speech:n.
+phonetic_symbols:/ˈwɪn.tʃɛst/
+grammar_note:专名音译，同 Sigzauer
+
+word:Lapua
+explanation:拉普阿（专名）
+part_of_speech:n.
+phonetic_symbols:/ˈla.pu.a/
+grammar_note:专名音译，同 Sigzauer
+
+word:marke
+explanation:型号；型别
+part_of_speech:n.
+phonetic_symbols:/ˈmar.kə/
+grammar_note:由 mark（标）与 -e 构成
+
+word:golvöly
+explanation:主要地；通常地
+part_of_speech:adv.
+phonetic_symbols:/ˈgɔl.vʌ.lj/
+grammar_note:由 golvö（主要的）加副词后缀 -ly 构成
+
+word:utverde
+explanation:定型；核准（定为制式）
+part_of_speech:vt.
+phonetic_symbols:/uˈtvɛr.də/
+grammar_note:过去式 utverdez
+
+word:sigf'kwande
+explanation:特种部队
+part_of_speech:n.
+phonetic_symbols:/ˈsɪg.fˈkwan.də/
+grammar_note:由 sigf（特别的）与 kwande（军队）组成
